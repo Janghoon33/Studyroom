@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+<mapper namespace="com.smhrd.domain.MemberDAO">
+	
+	<insert id="insertMember" parameterType="com.smhrd.domain.Member">
+		insert into t_member(mem_id, mem_pw, mem_nick, mem_email) values(#{mem_id}, #{mem_pw}, #{mem_nick}, #{mem_email})	
+	</insert>
+	
+	<select id="selectMember" parameterType="com.smhrd.domain.Member" resultType="com.smhrd.domain.Member">
+		select * from t_member where mem_id=#{mem_id} and mem_pw=#{mem_pw}
+	</select>
+	
+
+</mapper>
+	
