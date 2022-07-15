@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+
+*{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+ul{
+    padding:0;
+}
+
+body,html {
+    width:100vw;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: #FDE216;
+    cursor:url("img/coffee_icon_small.cur"),auto !important;
+
+}
+.block-box{
+    position:absolute;
+    width:100vw;
+    height:100vw;
+    background-color: black;
+    color:white;
+    display:none;
+    align-items:center;
+    justify-content: center;
+    z-index:100;
+    flex-direction: column;
+}
+
+
+.main{
+    width:80%;
+    height:90%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.main .main__content-box{
+    width:25%;
+    height:20%;
+    border: 5px solid black;
+    border-radius: 15%;
+    background-color: white;
+    box-shadow: 5px 12px 5px 5px rgba(0,0,0,0.4);
+    margin-bottom:50px;
+
+}
+
+.main__content__ul{
+    width:100%;
+    height:70%;
+    /* display:flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.img-baloon__wrapper{
+    position:absolute;
+    width:17%;
+    height:50%;
+    border:1px solid rgba(0,0,0,0.4),1px solid rgba(0,0,0,0.4),1px solid rgba(0,0,0,0.4);
+    left:5%;
+    opacity: 0;
+    transition: all .5s;
+    
+   
+}
+
+.img-baloon__wrapper img{
+    width:100% !important;
+    height:100% !important;
+    object-fit: cover !important;
+    border-radius: 10%;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+}
+
+.pre__report{
+    position:absolute;
+    width:32%;
+    height:40%;
+    right:0;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(5,1fr);
+    border:5px solid white;
+    background-color: white;
+    display:none;
+}
+
+.pre__report .report-flex {
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s;
+
+}
+.pre__report .report-flex:hover{
+ 
+    background:#FDE216;
+}
+
+.pre__report .report-flex a {
+    text-decoration: none;
+    color:black;
+    font-size: 32px ;
+    transition: all .5s;
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pre__report .report-flex a:hover{
+    color:white;
+}
+
+
+
+
+
+
+.main .main__content-box ul li {
+    list-style: none;
+} 
+
+
+.main img{
+    width:30%;
+    height:40%;
+    object-fit: cover;
+}
+.main .main__img-name {
+    height:10%;
+}
+
+.main .main__form {
+    width:70%;
+    height:20%;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+
+
+
+
+.input-btn1{
+    color:white;
+    border:none;
+    background:linear-gradient(45deg,#f0932b,#eb4d4b);
+    width:171px;
+    height:40px;
+    border-radius: 10%;
+    cursor:pointer;
+    transition: all .5s;
+    margin-left: 5px;
+}
+.input-btn:hover{
+    width:7%;
+    height:35%;
+    color: rgba(0,0,0,0);
+    background: url("img/coffee_back.png");
+    background-size: cover;
+    background-position: center center;
+}
