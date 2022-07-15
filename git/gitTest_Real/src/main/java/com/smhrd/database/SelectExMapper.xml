@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper
-        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.smhrd.domain.SelectExDAO">
-<select id="selectEx" parameterType="com.smhrd.domain.SelectExmember" resultType="com.smhrd.domain.SelectExmember">
-		select a.ex_name, a.ex_team, b.care_title from t_expert a join ex_write b on a.ex_id = b.ex_id 
-</select>
-</mapper>
