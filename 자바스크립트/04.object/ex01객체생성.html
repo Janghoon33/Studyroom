@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  객체 (Object) : 여러개의 데이터를 속성 & 값으로
+        //                  구분해서 저장
+
+        // 객체 생성 Case 1
+        // let hoon = {};
+
+        // hoon.name = "전장훈";
+        // hoon.subject = "web";
+        // hoon.loc = 'CGI';
+
+        // 객체 생성 Case 2
+        let hoon = {
+            name : '전장훈',
+            subject : 'web',
+            location : 'CGI',
+            intro : function(){
+                alert('반갑습니당!!')
+            }
+        };
+        // 객체는 속성을 이용해서 접근한다
+        // 접근하는 방법은 ? 객체이름.속성이름 ->  .(마침표)를 이용!
+        console.log(hoon.name);
+        hoon.intro();
+        
+    </script>
+</body>
+</html>

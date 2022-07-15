@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text">Hello</p>
+    <button onclick="innerFunc()">클릭!</button>
+    <!--<i></i> -> 기울임체 -->
+    <script>
+        function innerFunc(){
+            
+            let str = document.getElementById('text');
+
+            // 요소 = 태그 + 내용
+            // 내용만 수정, 접근 ? .innerText
+
+            // console.log(str.innerText);
+            console.log(str.innerHTML);
+            // str.innerText = '<h1>bye</h1>';
+
+            // 태그까지 적용? .innerHTML
+            str.innerHTML = '<h1>bye</h1>';
+            // str.innerText = '<h1>bye</h1>';
+
+        }
+    </script>
+</body>
+</html>

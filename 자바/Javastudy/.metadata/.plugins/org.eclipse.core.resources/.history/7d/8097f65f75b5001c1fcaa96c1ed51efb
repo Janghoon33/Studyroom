@@ -1,0 +1,30 @@
+package hhd;
+
+import java.io.FileNotFoundException;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+// 데이터베이스에 접근하는 역할의 클래스
+public class MenuDAO {
+	public ArrayList<MenuDTO> selectAll() {
+		try {
+		// 1. 드라이버 로딩
+		String driverName = "oracle.jdbc.driver.OracleDriver";
+		Class.forName(driverName);
+		// 2. 데이터베이스 접속
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		String id = "hr";
+		String pw = "hr";
+		Connection conn = DriverManager.getConnection(url,id,pw);
+		// 3. SQL문 준비
+		// 4. SQL문 실행
+		// 5. 실행결과 처리
+		// 6. 접속 종료
+	}catch(ClassNotFoundException e) {
+		e.printStackTrace();
+	}catch(SQLException e) {
+		e.printStackTrace();
+	}
+}
+}

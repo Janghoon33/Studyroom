@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<item key="selection" value="로그아웃"/>
+		<list key="findhistory">
+			<item value="package hhd;"/>
+			<item value="로그아웃"/>
+			<item value="바람"/>
+			<item value="hp"/>
+			<item value="null"/>
+			<item value="Exp"/>
+			<item value="경험치"/>
+			<item value="conn"/>
+			<item value="this.conn"/>
+			<item value="choice"/>
+			<item value="아니요"/>
+			<item value="아니오"/>
+			<item value="레벨"/>
+			<item value="이슬이"/>
+			<item value="name"/>
+		</list>
+		<list key="replacehistory">
+			<item value="exp"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="399"/>
+		<item key="DIALOG_Y_ORIGIN" value="181"/>
+		<item key="DIALOG_WIDTH" value="322"/>
+		<item key="DIALOG_HEIGHT" value="391"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+</section>

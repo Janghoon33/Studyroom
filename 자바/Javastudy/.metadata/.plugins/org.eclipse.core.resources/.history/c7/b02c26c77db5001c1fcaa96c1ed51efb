@@ -1,0 +1,61 @@
+package hhd;
+
+import java.io.FileNotFoundException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+// 데이터베이스에 접근하는 역할의 클래스
+public class MenuDAO {
+	private String driverName = "oracle.jdbc.driver.OracleDriver";
+	private String url = "jdbc:oracle:thin:@localhost:1521:xe";
+	private String id = "hr";
+	private String pw = "hr";
+	
+	public ArrayList<MenuDTO> selectAll() {
+		// 메뉴 객체들이 들어갈 빈 리스트 생성
+		ArrayList<MenuDTO> list = new ArrayList<MenuDTO>();
+		try {// -> 예외 발생시 catch로 잡아줌
+			Connection conn = getConnection();
+			// 3. SQL문 준비
+			String sql = "select * from meun";
+			PreparedStatement psmt = conn.prepareStatement(sql);
+			// 4. SQL문 실행
+			ResultSet rs = psmt.executeQuery();
+			// 5. 실행결과 처리
+			while (rs.next()) {
+				int menu_num = rs.getInt("menu_num");
+				String menu_name = rs.getString("menu_name");
+				int menu_price = rs.getInt("menu_price");
+
+				MenuDTO dto = new MenuDTO(menu_num, menu_name, menu_price);
+				list.add(dto);
+			}
+
+			// 6. 접속 종료
+			if (rs != null)
+				rs.close();
+			if (psmt != null)
+				psmt.close();
+			if (conn != null)
+				conn.close();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return list;
+	}
+
+	private Connection getConnection() throws ClassNotFoundException, SQLException {
+		// 1. 드라이버 로딩
+		Class.forName(driverName);
+		// 2. 데이터베이스 접속
+		Connection conn = DriverManager.getConnection(url, id, pw);
+		return conn;
+	}
+}

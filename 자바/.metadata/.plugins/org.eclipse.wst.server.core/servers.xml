@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v9.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v9.0 Server at localhost" name="Tomcat v9.0 Server at localhost" runtime-id="Apache Tomcat v9.0" saveSeparateContextFiles="false" server-type="org.eclipse.jst.server.tomcat.90" server-type-id="org.eclipse.jst.server.tomcat.90" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="7">
+    <list key="modules" value0="gitTest_Real::org.eclipse.jst.j2ee.server:gitTest_Real::jst.web::2.3" value1="board::org.eclipse.jst.j2ee.server:board::jst.web::2.3" value2="MessageSystem::org.eclipse.jst.j2ee.server:MessageSystem::jst.web::2.3"/>
+  </server>
+</servers>

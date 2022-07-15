@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--over/out : 지정한 요소(자식요소 포함)-->
+    <!--enter/leave : 지정한 요소(자식요소 미포함)-->
+    <img src="./img/pingu1.gif" onmouseover="chImg1()" onmouseout="chImg2()"> 
+
+    <script>
+        let img = document.getElementsByTagName("img");
+
+        console.log(img)
+
+        function chImg1(){
+            img[0].src = "./img/pingu2.gif";
+        }
+        // src는 주소를 그대로 보내줌
+        function chImg2(){
+            img[0].setAttribute("src","./img/pingu1.gif")
+        }
+        //src에 담겨진 값을 다음 값 -> "./img/pingu1.gif"으로 변경
+    </script>
+
+</body>
+</html>

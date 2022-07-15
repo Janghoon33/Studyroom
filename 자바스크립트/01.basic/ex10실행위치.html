@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./ex10외부방식.js"></script>
+</head>
+<body>
+    <!-- 내부 방식 : head 혹은 body 영역에 script 태그 안 직접 작성-->
+    <script>
+        console.log('내부방식');
+    </script>
+
+    <!--인라인 방식 : 태그에 직접 기능을 넣어줄 때 사용-->
+    <button onmouseenter="alert('마우스 올림!')">인라인방식</button>
+
+    <!--외부방식 : 외부의 js 파일 안에 작성 후 연결 
+    script src -->
+    <button onclick="ck()">외부방식</button>
+</body>
+</html>

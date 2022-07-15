@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="Ex03UserInfo" method="post">
+      <h4>직업</h4>
+      <!-- select 태그 작성시 각 옵션이 아닌 select 태그에 name 값 한번 지정 -->
+      <select name="job">
+         <option value="student">학생</option>
+         <option value="teacher">선생님</option>
+         <option value="developer">개발자</option>
+      </select>
+      
+      <h4>성별</h4>
+      <!-- radio 버튼 : 동일한 name 값이 지정된 버튼 중 하나만 선택 가능 (중복선택 불가능) -->
+      <input type="radio" name="gender" value="남자">남자
+      <input type="radio" name="gender" value="여자">여자 
+      
+      <h4>취미</h4>
+      <!-- 체크박스 : 동일한 name 값을 지정하면 그룹으로 묶어줄 수 있음 -->
+      <input type="checkbox" name="hobby" value="soccer">축구
+      <input type="checkbox" name="hobby" value="baseball">야구
+      <input type="checkbox" name="hobby" value="basketball">농구
+
+      <br><br>
+      <input type="submit" value="제출">
+   </form>
+</body>
+</html>

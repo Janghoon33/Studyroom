@@ -1,0 +1,39 @@
+package jh;
+import java.util.Scanner;
+
+// 자판기 클래스
+public class VendingMachine {
+	
+	public void title() {
+		System.out.println("===자판기 프로그램===");
+
+	}
+	
+	public void cal(){
+		  
+	      Scanner sc = new Scanner(System.in);
+	      System.out.print("돈을 넣으세요 >> ");
+	      int money = sc.nextInt();
+	      
+	      System.out.println("메뉴를 선택하세요");
+	      System.out.print("1.물(700) 2.콜라(1000) 3.커피(500) >>");
+	      int choice = sc.nextInt();
+	      
+	      int itemMoney = 0;
+	      if(choice == 1){
+	         itemMoney = 700;
+	      }else if(choice == 2){
+	         itemMoney = 1000;
+	      }else if(choice == 3){
+	         itemMoney = 500;
+	      }
+	      
+	      if(money - itemMoney < 0){
+	         System.out.println("돈이 부족합니다.");
+	      }else{
+	         money -= itemMoney;
+	         System.out.println(money+"원이 남았습니다.");
+	        
+		  }
+	}
+}

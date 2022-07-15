@@ -1,0 +1,49 @@
+package hhd;
+
+import java.util.Scanner;
+
+// 자판기 클래스
+public class VendingMachine {
+	private Scanner sc = new Scanner(System.in);
+	private int choice;
+	private int money;
+	private int itemMoney;
+	
+	private void showTitle() {
+		System.out.println("===자판기 프로그램===");
+	}
+
+	public void inputMoney() {
+		showTitle();
+		System.out.print("돈을 넣으세요 >> ");
+		money = sc.nextInt();
+	}
+
+	public void showMenu() {
+		System.out.println("메뉴를 선택하세요");
+		System.out.print("1.물(700) 2.콜라(1000) 3.커피(500) >>");
+		choice = sc.nextInt();
+	}
+
+	private void calculateChange() {
+		itemMoney = 0;
+		if (choice == 1) {
+			itemMoney = 700;
+		} else if (choice == 2) {
+			itemMoney = 1000;
+		} else if (choice == 3) {
+			itemMoney = 500;
+		}
+	}
+
+	public void returnChange() {
+		calculateChange();
+		if (money - itemMoney < 0) {
+			System.out.println("돈이 부족합니다.");
+		} else {
+			money -= itemMoney;
+			System.out.println(money + "원이 남았습니다.");
+
+	}
+}
+}

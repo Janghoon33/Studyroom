@@ -1,0 +1,12 @@
+package hhd;
+
+public class Korean {
+
+	public String getTitleMSG() {
+		return "===자판기 프로그램===";
+	}
+	public String getInputMoneyMSG() {
+		return "돈을 넣으세요 >> ";
+	}
+	
+}

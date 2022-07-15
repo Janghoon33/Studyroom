@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 데이터 보내는 3가지 조건 : action,name,submit -->
+   <form action="A02Join" method="post">
+      <table width="400px">
+         <tr bgcolor="gray" height="50px">
+            <th colspan="2">Step 1 : 아이디/비밀번호 입력</th>
+         </tr>
+         <tr bgcolor="whitesmoke" height="30px">
+            <td>아이디:</td>
+            <td><input type="text" name="id"></td>
+         </tr>
+         <tr bgcolor="whitesmoke" height="30px">
+            <td>비밀번호:</td>
+            <td><input type="text" name="pw"></td>
+         </tr>
+         <tr bgcolor="whitesmoke" height="30px">
+            <td>비밀번호 확인:</td>
+            <td><input type="text" name="re_pw"></td>
+         </tr>
+
+         <tr bgcolor="gray" height="50px">
+            <th colspan="2">Step 2 : 개인정보</th>
+         </tr>
+         <tr bgcolor="whitesmoke" height="30px">
+            <td>성별:</td>
+            <td>남<input type="radio" value="남" name="gender"> 여<input
+               type="radio" value="여" name="gender">
+            </td>
+         </tr>
+         <tr bgcolor="whitesmoke" height="30px">
+            <td>혈액형:</td>
+            <td><select name="blood">
+                  <option value="A형" >A형</option>
+                  <option value="B형" >B형</option>
+                  <option value="AB형" >AB형</option>
+                  <option value="O형" >O형</option>
+            </select></td>
+         </tr>
+         <tr bgcolor="whitesmoke" height="30px">
+            <td>생일:</td>
+            <td><input type="date" name="birth"></td>
+         </tr>
+         <tr bgcolor="gray" height="50px">
+            <th colspan="2">Step 3 : 선호도</th>
+         </tr>
+         <tr bgcolor="whitesmoke" height="30px">
+            <td>취미:</td>
+            <td>축구<input type="checkbox" value="soccer" name="hobby">
+               야구<input type="checkbox" value="baseball" name="hobby"> 
+               농구<input type="checkbox" value="basketball" name="hobby">
+            </td>
+         </tr>
+         <tr bgcolor="whitesmoke" height="30px">
+            <td>좋아하는 색깔:</td>
+            <td><input type="color" name="color"></td>
+         </tr>
+         <tr bgcolor="gray" height="50px">
+            <th colspan="2">Step 4 : 적고 싶은 말</th>
+         </tr>
+         <tr>
+            <td colspan="2"><textarea cols="60" rows="5" name="textarea"></textarea></td>
+         </tr>
+         <tr align="center">
+            <td colspan="2"><input type="submit" value="제출하기"></td>
+         </tr>
+      </table>
+   </form>
+</body>
+</html>

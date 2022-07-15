@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+</head>
+<body>
+    <p>로그인 폼을 작성해봅시다</p>
+    <button id="btnP" onclick="f()">p태그 다루기</button>
+    <div id="div1">
+        <h1 class="h">로그인폼</h1>
+        ID : <input type="text" name="id" value="sdf"><br>
+        PW : <input type="text" name="pw">
+    </div>
+    <p class="h"></p>
+    <button id="btnDiv">div태그 다루기</button>
+    <button id="btnH">h태그 다루기</button>
+    <button id="addAttr">id input 속성 추가</button>
+    <button id="getId_Pw">input태그 다루기</button>
+
+    <script>
+        $("#btnP").click(function(){
+            // jquery 로 tag 사이 글씨 가져오기
+            // 자바스크립트 -> innerText, innerHTML
+            
+            // jquery tag 사이 요소 가지고 오기(태그, 텍스트 포함)
+            let p = $('p').html()
+            alert(p)
+            // jquery tag 사이 요소 바꾸기(태그, 텍스트 포함)
+            $('p').html('<i>p태그</i> 바꾸기')
+        })
+
+        $('#btnDiv').click(function(){
+            $('#div1').css('background-color','pink')
+        })
+
+        $("#btnH").click(function(){
+            // 자바스크립트의 innerText와 동일
+            let h = $('.h').text()
+            alert(h)
+            $('.h').text('바꾸기')
+        })
+
+        $('#addAttr').click(function(){
+            //속성 값 바꾸기
+            $('input[name=id]').attr('placeholder','ID작성')
+            //속성 값 가지고오기
+            alert($('input[name=id]').attr('type'))
+        })
+
+        $('#getId_Pw').click(function(){
+            //input 에 작성된 값(value 속성) 가지고 오기
+            let id = $('input[name=id]').val();
+            let pw = $('input[name=pw]').val();
+
+            alert(id+" : "+pw)
+            //input에 작성된 값(value 속성) 수정
+            $('input[name=pw]').val('비밀번호!');
+
+        })
+    </script>
+</body>
+</html>

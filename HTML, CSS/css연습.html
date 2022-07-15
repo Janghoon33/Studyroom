@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: blueviolet;
+            height: 50px;
+            /* width: 100%; */
+            display: flex;
+            /* display: flex;   */
+            /* flex 아이템들이 가로방향으로 배치되고 
+            자신이 가진 내용물의 width만큼만 차지(inline요소처럼)*/
+            /* flex-direction: row;  아이템들이 행(가로)방향으로 배치(기본값) */
+            /*flex-flow: row wrap;  아래의 두 줄 줄여 쓴 것 */
+            /*justify-content: space-around;  row(가로 배치)일때는 왼쪽,
+             column(세로 배치)일때는 위에 */
+            flex-grow: 10;
+        }
+        .item {
+            width: 100px;
+            display: flex;
+            flex-basis: 100px;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10px;
+        }
+        /*.item {
+	flex-basis: auto; 기본값 */
+	/* flex-basis: 0; */
+	/* flex-basis: 50%; */
+	/* flex-basis: 300px; */
+	/* flex-basis: 10rem; */
+	/* flex-basis: content; */
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" style="background-color: red;">안녕하세요</div>
+        <div class="item" style="background-color: yellow;">반갑습니다</div>
+        <div class="item" style="background-color: green;">병갑입니다</div>
+    </div>
+</body>
+</html>

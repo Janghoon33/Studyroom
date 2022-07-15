@@ -1,0 +1,22 @@
+package hhd;
+
+import java.util.Scanner;
+
+public class Main {
+	// 프로그램의 시작점 : 리팩토링
+	public static void main(String[] args) {
+		VendingMachine vm = new VendingMachine(); // 객체생성
+		
+		vm.showTitle();
+		vm.inputMoney();
+		vm.showMenu();
+		vm.calculateChange();
+		vm.returnChange();
+		
+		
+		
+		
+		}
+
+	}
+

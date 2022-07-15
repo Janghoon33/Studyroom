@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ** 함수
+        // 1. 어떤 실행코드를 묶어서 실행하기위함 (재사용성)
+        // 2. 중복되는 코드 최소화
+
+        // ** 함수 선언
+        function helloworld(){
+            console.log('hi');
+        }
+
+        // () - 어떤 값을 전달 받아 올건지 인자 (파라미터) 정의
+        // {} - 실제로 함수 안에서 어떤 코드가 동작하는지
+
+        // ** 함수 호출
+        helloworld();
+
+        // ** 매개변수를 통한 기능 출력 함수
+        function addNum(num1,num2){
+            console.log(num1+num2);
+        }
+        addNum(2,3);
+
+        // ** 매개변수를 통한 리턴함수
+        function minusNum(num1,num2){
+            return num1-num2;
+        }
+
+        let res = minusNum(10,3);
+        console.log(res);
+
+        
+    </script>
+</body>
+</html>

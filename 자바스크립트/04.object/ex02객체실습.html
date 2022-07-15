@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let poc1 = {
+            name : '피카츄',
+            age : 2,
+            skill : function(){
+                alert('백만볼트!🎇')
+            }
+        };
+            
+        
+        let poc2 = {
+            name : '꼬부기',
+            age : 1,
+            skill : function(){
+                console.log('물대포!🥽')
+        }
+    }
+
+    document.write('첫번째 포켓몬 이름 : '+poc1.name+'<br>');
+    document.write('첫번째 포켓몬 나이 : '+poc1.age+'<br><br>');
+    document.write('두번째 포켓몬 이름 : '+poc2.name+'<br>');
+    document.write('두번째 포켓몬 나이 : '+poc2.age+'<br>');
+
+    poc1.skill();
+    poc2.skill();
+
+    </script>
+</body>
+</html>

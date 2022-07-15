@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body id="bodyTag">
+    <a href="#">안녕하세요!</a>
+    <br><br>
+    <button id="btn1">Design Change! 💖</button>
+    <button id="btn2">Revert 🌟</button>
+    <br>
+
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+    </ul>
+
+    <h1>오늘은 7/5</h1>
+    <p>너무 더운 여름이엥ㅛ 🌞🥵</p>
+    <script>
+        // 여기서부터 js문법
+        document.getElementById('btn1').addEventListener('click',function(){
+            // btn1을 클릭했을때 실행될 로직
+            // console.log('클릭')
+
+            // 1. 배경색 검정
+            document.getElementById('bodyTag').style.backgroundColor = 'black';
+            // 2. 글자색 흰색
+            document.getElementById('bodyTag').style.color = 'white'
+        })
+        document.getElementById('btn2').addEventListener('click',function(){
+
+            document.getElementById('bodyTag').style.backgroundColor = '#75EBD7';
+            document.getElementById('bodyTag').style.color = '#0444DB'
+            
+        })
+    </script>
+</body>
+</html>

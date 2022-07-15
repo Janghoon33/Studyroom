@@ -1,0 +1,1 @@
+select * from pocketmon_info;

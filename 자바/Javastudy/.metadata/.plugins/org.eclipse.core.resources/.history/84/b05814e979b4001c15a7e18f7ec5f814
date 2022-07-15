@@ -1,0 +1,50 @@
+package hhd;
+
+import java.util.Scanner;
+
+// 자판기 클래스
+public class VendingMachine {
+	private Scanner sc = new Scanner(System.in);
+	private int choice;
+	private int money;
+	private int itemMoney;
+	private Korean kor = new Korean();
+	
+	private void showTitle() {
+		System.out.println(kor.getTitleMSG());
+	}
+
+	public void inputMoney() {
+		showTitle();
+		System.out.print(kor.getInputMoneyMSG());
+		money = sc.nextInt();
+	}
+
+	public void showMenu() {
+		System.out.println(kor.getMenuMSG());
+		System.out.print(kor.getMenu());
+		choice = sc.nextInt();
+	}
+
+	private void calculateChange() {
+		itemMoney = 0;
+		if (choice == 1) {
+			itemMoney = 700;
+		} else if (choice == 2) {
+			itemMoney = 1000;
+		} else if (choice == 3) {
+			itemMoney = 500;
+		}
+	}
+
+	public void returnChange() {
+		calculateChange();
+		if (money - itemMoney < 0) {
+			System.out.println(kor.getNoChangeMSG());
+		} else {
+			money -= itemMoney;
+			System.out.println(money + kor.getChangeMSG());
+
+	}
+}
+}

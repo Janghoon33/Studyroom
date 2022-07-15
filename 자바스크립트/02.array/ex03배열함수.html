@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 배열 함수
+        let list = [];
+
+        // 1. 배열의 맨 마지막 인덱스에 데이터 넣기! : push()
+        list.push(3);       
+        console.log('데이터 입력 : '+list);
+        list.push('정형');
+        console.log('데이터 입력 : '+list);
+
+        // 2. 배열의 맨 마지막 인덱스에 데이터 삭제하기! : pop()
+        list.pop();
+        console.log('데이터 삭제 : '+list);
+
+        // 3. 배열의 맨 앞 인덱스에 데이터 넣기! : unshift()
+        list.unshift('장훈');
+        console.log('데이터 입력 : '+list);
+
+        // 4. 배열의 맨 앞 인덱스 데이터 삭제하기 : shift()
+        list.shift();
+        console.log('데이터 삭제 : '+list);
+
+        // 5. 원하는 위치에 데이터 추가 혹은 삭제 : splice()
+
+        // (1) 추가 : splice(원하는 인덱스,0,추가할데이터)
+        list.splice(1,0,'민트초코맛없다..')
+        console.log('데이터 입력 : '+list);
+
+        // (2) 삭제 : splice(원하는 인덱스,삭제하길 원하는 개수)
+        list.splice(0,2);
+        console.log('데이터 삭제 : '+list);
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        div>img{
+            width: 200px;
+            height: 200px;
+        }
+        .c1{
+            border: 3px solid chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+        <img src="img/pg1.gif">
+    </div>
+    <button id="btn1">div내부 앞에 추가</button>
+    <button id="btn2">div내부 뒤에 추가</button>
+    <button id="btn3">div외부 앞에 추가</button>
+    <button id="btn4">div외부 뒤에 추가</button>
+    <button id="btn5">img 1개 삭제</button>
+    <button id="btn6">div 안 비우기</button>
+    <button id="btn7">class 추가</button>
+    <button id="btn8">class 삭제</button>
+    <button id="btn9">부모요소 접근</button>
+
+    <script>
+        // .click vs on('click') : 동적 이벤트 바인딩 차이
+        // 이벤트 발생을 통해 생성된 요소 -> 동적으로 생성이 되었다!!
+        // .click : 최초에 페이지를 로딩할 때 선언되었던 요소 이벤트 부여
+        //          더이상 동적으로 이벤트를 바인딩(부여) 하지 않음
+        // on() : 동적으로 추가된 요소에 이벤트 부여
+
+        $(document).on("click","#btn1",function(){
+            $('div').prepend('<img src="./img/pg2.gif">')
+        })
+
+        $("#btn2").click(function(){
+            $('div').append('<img src="./img/pg3.gif">')
+        })
+
+        //$(이벤트를 적용시키는 요소의 부모-body일 경우 document)
+        $(document).on("click","#btn3",function(){
+            $('div').before('<img src="./img/pg2.gif">')
+        })
+
+        $("#btn4").click(function(){
+            $('div').after('<img class = "img1" src="./img/pg3.gif">')
+        })
+        //삭제함수 : remove
+        $("#btn5").click(function(){
+            $(".img1").remove()
+        })
+        $("#btn6").click(function(){
+            $('div').empty()
+        })
+        //클래스 추가
+        $("#btn7").click(function(){
+            $('img').addClass('c1')
+        })
+        //클래스 삭제
+        $(document).on("click","#btn8",function(){
+            $('img').removeClass('c1')
+        })
+        //부모요소 접근 : parent()
+        $("#btn9").click(function(){
+            $('div>img').parent().css('background-color','pink')
+        })
+
+
+
+        
+    </script>
+</body>
+</html>

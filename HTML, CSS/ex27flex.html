@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+            height: 50px;
+            margin-left: 10px;
+            display: flex;
+        }
+        .item:nth-child(2) {
+	    z-index: 1;
+	    transform: scale(2);
+        }
+        .container {
+            background-color: aquamarine;
+            display: flex;
+                    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" style ="background-color: red;font-weight: bold;"> 안녕하세요 </div>
+        <div class="item" style ="background-color: yellow;font-weight: bold;"> 플렉스입니다 </div>
+        <div class="item" style ="background-color: greenyellow;font-weight: bold;"> 반가워요 </div>
+    </div>
+</body>
+</html>

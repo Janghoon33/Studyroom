@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace : mapper 식별자(절대로 겹치면 안됨!) : sql을 실행하는 클래스(DAO) 경로-->
+<mapper namespace="com.smhrd.domain.DAO">
+	<!-- id : 각 태그를 식별해줄 키값 -->
+	<!-- parameterType : 매개변수자리 -->
+	<!-- 회원가입 -->
+	<insert id="insert" parameterType="com.smhrd.domain.Member">
+		insert into member_web values (#{id},#{pw},#{nick})
+	</insert>
+	<!-- resultType(select) : 읽어온 값을 어떤 타입으로 반환할껀지! -->
+	<select id = "selectOne" resultType="com.smhrd.domain.Member" parameterType="com.smhrd.domain.Member">
+		select * from member_web where id=#{id} and pw=#{pw}
+	</select>
+</mapper>

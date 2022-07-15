@@ -1,0 +1,36 @@
+package hhd;
+
+public class Language {
+
+	public String getTitleMSG() {
+		return null;
+	}
+
+	public String getInputMoneyMSG() {
+		return null;
+	}
+
+	public String getChoiceMSG() {
+		return null;
+	}
+
+	public String getItemMSG() {
+		return null;
+	}
+
+	public String getNoMoneyMSG() {
+		return null;
+	}
+
+	public String getChangeMSG(int money) {
+		return null;
+	}
+	
+	
+
+
+	
+	
+	
+	
+}

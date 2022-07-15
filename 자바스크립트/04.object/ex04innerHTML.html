@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>클릭 한번 해볼까요?</h1>
+
+    <button onclick="mkH1()">h1태그 생성</button> 
+    <button onclick="mkA()">a태그 생성</button>
+    <button onclick="mkUl()">ul태그 생성</button>
+    
+    <div id="div1">h1태그</div>
+
+    <script>
+        // id= div1인 요소 가지고 오기 -> 변수 (div1)
+        let div1 = document.getElementById('div1');
+
+        // 1. mkH1() : div1에 h1태그 추가 <h1>h1태그 추가!</h1>
+        
+        // 2. 누적이 되게 수정 
+        
+
+        function mkH1(){         
+            div1.innerHTML += '<h1>h1태그 추가!</h1>';
+        }
+        function mkA(){
+            div1.innerHTML += "<a href='http://www.goolge.com'>Google로 이동</a><br>";
+        }
+
+        function mkUl(){
+            div1.innerHTML += "<ul>"
+            div1.innerHTML += "<li>리스트1</li>"
+            div1.innerHTML += "<li>리스트2</li>"
+            div1.innerHTML += "</ul>"
+            
+        }
+    </script>
+</body>
+</html>

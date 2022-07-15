@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        form태그
+        - 사용자가 입력한 데이터를 묶어서 전달할때(서버) 사용하는 태그
+        - action -> 데이터를 보낼 주소
+    -->
+    <!--
+        input태그
+        - 사용자에게 다앙햔 입력창을 제공해주는 태그
+        - type속성을 기준으로 형식을 지정
+        - ★ name,value속성을 꼭 이해하기!★
+    -->
+    <form action="#" method="get">
+        <!-- 일반 텍스트를 입력하는 창-->
+        이름 : <input type="text" value="" name="이름">
+        <br>
+        나이 : <input type="text" value="" name="나이">
+        <br>
+        <!-- 비밀번호를 입력하는 창-->
+        비밀번호 : <input type="password" name="비밀번호" maxlength="5">
+        <br>
+        <!-- 체크박스 vs 라디오버튼-->
+        <!--
+            1. 차이점 = 체크박스는 중복이 된다, 라디오버튼은 중복이 되지않는다.
+            2. 중요한점 = value 꼭 지정, name 그룹화
+        -->
+        축구 : <input type="checkbox" value="soccer" name="hobby"> 
+        농구 : <input type="checkbox" value="basketball" name="hobby">
+        <br>
+        남자 : <input type="radio" name="gender" value="남자">
+        여자 : <input type="radio" name="gender" value="여자">  
+        <br>
+        <!-- 다양한 인풋창-->
+        <input type="file">
+        <br>
+        <input type="color">
+        <br>
+        <input type="number">
+        <br>
+        <input type="range">
+        <br>
+        <input type="date"> <input type="datetime-local">
+        <br>
+        <!-- select vs datalist -->
+        <select>
+            <option>메일선택</option>
+            <option value="네이버">naver.com</option>
+            <option value="다음">daum.net</option>
+        </select>
+
+        <input type="text" list="singer">
+        <datalist id = "singer">
+            <option>아이유</option>
+            <option>박재범</option>
+            <option>10cm</option>
+        </datalist>
+        <br><br>
+        <!-- 사용자가 댓글등과 같은 긴 텍스트를 입력하는 창-->
+        <textarea cols="50" rows="3"></textarea>
+
+        <!-- 데이터를 서버에게 전송해주는 버튼-->
+        <br>
+        <input type="submit" value="제출하기">
+    </form>
+</body>
+</html>

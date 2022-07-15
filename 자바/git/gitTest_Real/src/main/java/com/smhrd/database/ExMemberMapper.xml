@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.domain.ExMemberDAO">
+	
+	<insert id="ExInsertMember" parameterType="com.smhrd.domain.ExMember">
+		insert into t_expert(ex_id, ex_pw, ex_name, ex_team, ex_phone) values(#{ex_id}, #{ex_pw}, #{ex_name}, #{ex_team}, #{ex_phone} )	
+	</insert>
+	
+	<select id="ExSelectMember" parameterType="com.smhrd.domain.SelectExmember">
+		select * from t_expert where ex_id=#{ex_id} and ex_pw=#{ex_pw}
+	</select>
+		
+	
+</mapper>
+	

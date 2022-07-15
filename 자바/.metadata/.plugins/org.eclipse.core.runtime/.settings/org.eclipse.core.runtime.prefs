@@ -1,0 +1,9 @@
+content-types/org.eclipse.core.runtime.text/charset=UTF-8
+content-types/org.eclipse.jdt.core.javaClass/charset=UTF-8
+content-types/org.eclipse.jdt.core.javaProperties/charset=UTF-8
+content-types/org.eclipse.jdt.core.javaSource/charset=EUC-KR
+content-types/org.eclipse.jpt.common.core.content.jar/charset=UTF-8
+content-types/org.eclipse.jst.jsp.core.jspfragmentsource/charset=UTF-8
+content-types/org.eclipse.jst.jsp.core.jspsource/charset=UTF-8
+content-types/org.eclipse.jst.jsp.core.tagsource/charset=UTF-8
+eclipse.preferences.version=1

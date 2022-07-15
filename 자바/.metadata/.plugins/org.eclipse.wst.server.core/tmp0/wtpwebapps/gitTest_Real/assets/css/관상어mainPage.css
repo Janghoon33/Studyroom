@@ -1,0 +1,24 @@
+#boxWrap {
+    width: auto;
+    height: auto;
+  }
+  
+  #boxWrap : after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
+  #boxWrap p+p{margin-left:5px;}
+  
+  #boxWrap .original {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-color: #cbcbcb;
+    text-align: center;
+    line-height: 100px;
+  }
+  
+  .btnWrap{width:100%;}
+  padding-left: 230px;

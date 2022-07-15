@@ -1,0 +1,41 @@
+#layout{
+    width: 500px;
+    height: 500px;
+}
+#header{
+    background-color: #EA4335;
+    height: 10%;
+    width: 100%;
+    text-align : center ;
+}
+#nav{
+    background-color: #ff5e00;
+    height: 10%;
+    width: 100%;
+    text-align : center ;
+}
+#side{
+    background-color: #4285f4;
+    width: 30%;
+    height: 60%;
+    float: left;
+    text-align : center ;
+}
+#section1{
+    background-color: #34a853;
+    height: 30%;
+    width: 100%;
+    text-align : center ;
+}
+#section2{
+    background-color: #fbbc05;
+    height: 30%;
+    width: 100%;
+    text-align : center ;
+}
+#footer{
+    background-color: #8a8d92;
+    height: 20%;
+    width: 100%;
+    text-align : center ;
+}

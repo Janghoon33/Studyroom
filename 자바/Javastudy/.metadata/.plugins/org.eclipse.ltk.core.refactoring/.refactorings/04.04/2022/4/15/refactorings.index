@@ -1,0 +1,7 @@
+1649040145610	Copy compilation units
+1649040185629	Move compilation units
+1649040198848	Rename package 'tc'
+1649125629884	Rename compilation unit 'Japan.java'
+1649130328108	Rename type 'MeunDAO'
+1649229764933	Extract method 'getConnection'
+1649230232306	Extract method 'close'

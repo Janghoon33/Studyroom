@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="bodyTag">
+    <script>
+        
+        // let num = 13
+        // if (num > 10){
+        //     console.log("10보다 큰 수 ");
+        // } else {
+        //     console.log("10보다 작은수 ");
+        // }
+        
+        // 1. 원하는 색상을 입력하세요. 라는 입력창 만들기
+        // 2. 빨강 => red / 초록 => green / 파랑 => blue 배경색
+        // 그외에는 '잘못 입력하셨습니다.'라는 알림창
+        // => ex00 따라하기.html 참고!
+
+        let col = prompt('원하는 색상을 입력하세요.');
+
+        if(col=='빨강'){
+            document.getElementById('bodyTag').style.backgroundColor = 'red';
+        }else if(col=='초록'){
+            document.getElementById('bodyTag').style.backgroundColor = 'green';
+        }else if(col=='파랑'){
+            document.getElementById('bodyTag').style.backgroundColor = 'blue';
+        }else{
+            alert('잘못 입력하셨습니다!')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Case 1
+        // 1. 23,54,78,13,44 
+        let list = [23,54,78,13,44];
+
+        // 2. 비교할 대상 maxNum을 만들어준다
+       let maxNum = list[0];
+        // 3. maxNum과 리스트의 값을 순서대로 비교 후,
+        for(let i = 0; i < list.length; i++){
+            if(list[i]>maxNum){
+                maxNum = list[i]
+            }
+        }
+       
+
+    // Case 2
+    let maxNum2 = Math.max.apply(null,list);
+    
+    // 4. 최종적으로 가장 큰 수 alert 출력
+    alert('최대값 >> '+ maxNum2)
+    </script>
+</body>
+</html>

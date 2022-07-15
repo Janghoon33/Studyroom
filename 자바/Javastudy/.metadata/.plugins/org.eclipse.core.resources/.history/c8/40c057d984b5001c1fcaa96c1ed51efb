@@ -1,0 +1,61 @@
+package hhd;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+// 자판기 클래스
+public class VendingMachine {
+	private Scanner sc = new Scanner(System.in);
+	private int choice;
+	private int money;
+	private int itemMoney;
+	private Language lang;
+	private MenuDAO dao = new MenuDAO(); // DB접속용 DAO객체 생성
+	private ArrayList<MenuDTO> menuList;
+	
+	// 생성자 : 객체를 생성할때 호출하는 메소드
+	// 생성자의 특징 : 반환타입이 없다, 클래스 이름과 생성자 메소드 이름이 동일하다
+	// 활용 용도 : 객체를 생성하기 위해서, 객체의 필드를 초기화하기 위해서
+	public VendingMachine(Language lang) {
+		this.lang=lang;
+		menuList = dao.selectAll(); // 메뉴정보 select
+	}
+	
+	private void showTitle() {
+		System.out.println(lang.getTitleMSG());
+	}
+
+	public void inputMoney() {
+		showTitle();
+		System.out.print(lang.getInputMoneyMSG());
+		money = sc.nextInt();
+	}
+
+	public void showMenu() {
+		System.out.println(lang.getChoiceMSG());
+		System.out.print(lang.getItemMSG(menuList));
+		choice = sc.nextInt();
+	}
+
+	private void calculateChange() {
+		itemMoney = 0;
+		if (choice == 1) {
+			itemMoney = 700;
+		} else if (choice == 2) {
+			itemMoney = 1000;
+		} else if (choice == 3) {
+			itemMoney = 500;
+		}
+	}
+
+	public void returnChange() {
+		calculateChange();
+		if (money - itemMoney < 0) {
+			System.out.println(lang.getNoMoneyMSG());
+		} else {
+			money -= itemMoney;
+			System.out.println(lang.getChangeMSG(money));
+
+	}
+}
+}
