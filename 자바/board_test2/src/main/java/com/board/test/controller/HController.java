@@ -43,7 +43,7 @@ public class HController {
 	
 	@GetMapping("/boardInsert.do")
 	public String boardForm() {
-		System.out.println("ÀÛ¼ºÆäÀÌÁö");
+		System.out.println("ì‘ì„±í˜ì´ì§€");
 		return "boardForm";
 	}
 	
@@ -55,7 +55,7 @@ public class HController {
 		
 		service.writeAction(b_title, b_content);
 		
-		System.out.println("¾×¼Ç");
+		System.out.println("ì•¡ì…˜");
 
 		return "redirect:/boardList";
 
