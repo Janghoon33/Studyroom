@@ -6,11 +6,12 @@
 		select * from tbl_board
 	</select>
 	
-	<insert id="boardInsert" parameterType="com.board.test.domain.Board">
-		insert into tbl_board(b_title, b_content)
-		values (#{b_title}, #{b_content})
+	<insert id="writeAction" parameterType="com.board.test.domain.Board">
+		insert into tbl_board( b_title, b_content, b_writer, b_date)
+		values ( #{param1}, #{param2}, "jh", now())
 	</insert>
-	
+	<!-- 		insert into tbl_board( b_title, b_content, b_writer, b_date)
+		values ( #{param1}, #{param2}, "jh", now()) -->
 	
 
 

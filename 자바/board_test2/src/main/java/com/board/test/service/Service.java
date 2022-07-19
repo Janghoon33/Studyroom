@@ -25,4 +25,12 @@ public class Service {
 	public List<Board> boardList(Board board){
 		return boardList(board);
 	}
+
+	public int writeAction(String b_title, String b_content) {
+	return mapper.writeAction(b_title, b_content);
+	}	
+	
+//	public void writeAction(String b_title, String b_content) {
+//		mapper.writeAction(b_title, b_content);
+//	}
 }

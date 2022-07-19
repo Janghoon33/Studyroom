@@ -11,8 +11,7 @@ public interface BoardMapper {
 	
 	public List<Board> boardList();
 	
-	public int boardInsert(Board vo);
 	
-	
+	public int writeAction(String b_title, String b_content);
 	
 }
