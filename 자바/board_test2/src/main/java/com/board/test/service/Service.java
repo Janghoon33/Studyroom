@@ -30,7 +30,5 @@ public class Service {
 	return mapper.writeAction(b_title, b_content);
 	}	
 	
-//	public void writeAction(String b_title, String b_content) {
-//		mapper.writeAction(b_title, b_content);
-//	}
+
 }

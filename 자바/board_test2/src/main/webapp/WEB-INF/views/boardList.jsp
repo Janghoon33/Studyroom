@@ -42,7 +42,7 @@
 		%>
 		<tr>
 			<td><%=board.getB_num() %></td>
-			<td><%=board.getB_title() %></td>
+			<td><a href="/boardContent.do/<%=board.getB_num()%>"><%=board.getB_title() %></td>
 			<td><%=board.getB_content() %></td>
 			<td><%=board.getB_writer() %></td>
 			<td><%=board.getB_date() %></td>

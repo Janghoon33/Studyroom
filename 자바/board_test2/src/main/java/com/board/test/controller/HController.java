@@ -9,6 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -43,7 +44,7 @@ public class HController {
 	
 	@GetMapping("/boardInsert.do")
 	public String boardForm() {
-		System.out.println("ì‘ì„±í˜ì´ì§€");
+		System.out.println("ÀÛ¼ºÆäÀÌÁö");
 		return "boardForm";
 	}
 	
@@ -55,9 +56,21 @@ public class HController {
 		
 		service.writeAction(b_title, b_content);
 		
-		System.out.println("ì•¡ì…˜");
+		System.out.println("¾×¼Ç");
 
 		return "redirect:/boardList";
 
 	}
+	@RequestMapping("boardContent.do/{b_num}")
+	public String boardContent(Model model, @PathVariable int b_num) {
+		
+		Board vo = mapper.boardContent(b_num);
+		
+		System.out.println(vo.getB_title());
+		
+		model.addAttribute("board", vo);
+		
+		return "boardContent";
+	}
+
 }

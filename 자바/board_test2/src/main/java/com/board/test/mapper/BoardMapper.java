@@ -14,4 +14,7 @@ public interface BoardMapper {
 	
 	public int writeAction(String b_title, String b_content);
 	
+	public Board boardContent(int b_num);
+	
+	
 }

@@ -10,9 +10,11 @@
 		insert into tbl_board( b_title, b_content, b_writer, b_date)
 		values ( #{param1}, #{param2}, "jh", now())
 	</insert>
-	<!-- 		insert into tbl_board( b_title, b_content, b_writer, b_date)
-		values ( #{param1}, #{param2}, "jh", now()) -->
 	
-
+	<select id="boardContent" resultType="com.board.test.domain.Board">
+		select * from tbl_board
+		where b_num = #{b_num}
+	</select>
+	
 
 </mapper>

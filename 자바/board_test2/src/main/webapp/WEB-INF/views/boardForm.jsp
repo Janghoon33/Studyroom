@@ -29,7 +29,7 @@
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
 							<button type="submit" class="btn btn-default">Submit</button>
-							<!-- <button onclick = "location.href='boardList.do'">목록보기</button> -->
+							<button onclick = "location.href='/boardList'">목록보기</button>
 						</div>
 					</div>
 				</form>
