@@ -5,8 +5,13 @@
 	<select id="boardList" resultType="com.board.test.domain.Board">
 		select * from tbl_board
 	</select>
-
-
+	
+	<insert id="boardInsert" parameterType="com.board.test.domain.Board">
+		insert into tbl_board(b_title, b_content)
+		values (#{b_title}, #{b_content})
+	</insert>
+	
+	
 
 
 </mapper>

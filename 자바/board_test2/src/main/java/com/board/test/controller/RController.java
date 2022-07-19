@@ -22,9 +22,9 @@ public class RController {
 	}
 	
 	
-	@RequestMapping(value = "/boardMB", method = {RequestMethod.GET})
-	public List<Board> userDataFindAllMB(){
-		List<Board> list = service.findAllMB();
+	@RequestMapping(value = "/boarda", method = {RequestMethod.GET})
+	public List<Board> boardList(Board board){
+		List<Board> list = service.boardList(board);
 		return list;
 	}
 	

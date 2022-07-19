@@ -1,5 +1,7 @@
 package com.board.test.domain;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -33,4 +35,6 @@ public class Board {
 		
 	// Ã·ºÎ ÆÄÀÏ
 	private String b_file;
+
+	
 }

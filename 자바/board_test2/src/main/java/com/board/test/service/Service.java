@@ -18,11 +18,11 @@ public class Service {
 	BoardMapper mapper;
 	
 	public List<Board> findAll(){
-		
 		return repo.findAll();
 	}
 	
-	public List<Board> findAllMB(){
-		return mapper.boardList();
+	
+	public List<Board> boardList(Board board){
+		return boardList(board);
 	}
 }

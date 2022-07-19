@@ -10,4 +10,9 @@ import com.board.test.domain.Board;
 public interface BoardMapper {
 	
 	public List<Board> boardList();
+	
+	public int boardInsert(Board vo);
+	
+	
+	
 }
