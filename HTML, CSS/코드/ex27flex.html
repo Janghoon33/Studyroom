@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+            height: 50px;
+            margin-left: 10px;
+            display: flex;
+        }
+        .item:nth-child(2) {
+	    z-index: 1;
+	    transform: scale(2);
+        }
+        .container {
+            background-color: aquamarine;
+            display: flex; /* =display: inline-flex; 
+                                자신의 내용만큼 width차지
+                                height는 컨테이너 높이만큼*/
+                    }
+        /* 
+        배치 방향결정
+        flex-direction : 아이템들이 배치되는 축의 방향을 결정하는 속성
+        : row -> 아이템들이 행(가로)방향으로 배치된다 (기본값)
+        : row-reverse -> 아이템들이 역순으로 가로배치된다
+        : column -> 아이템들이 열(세로)방향으로 배치된다
+        : column-reverse -> 아이템들이 역순으로 세로배치된다
+        ex) flex-direction: row;
+
+        줄넘김 처리 설정
+        flex-wrap : 컨테이너가 더 이상 아이템들을 한 줄에 담을 여유 공간이 없을 때 아이템 줄바꿈을 어떻게 할지 결정하는 속성
+        - nowrap -> 줄바꿈을 하지 않는다 넘치면 그냥 삐져나옴
+        - wrap -> 줄바꿈을 한다 float이나 inline-block으로 배치한 요소들과 비슷하게 동작함
+        - wrap-reverse -> 줄바꿈을 하는데 아이템을 역순으로 배치한다
+        ex) flex-wrap: wrap;
+
+        flex-flow
+        : flex-direction과 flex-wrap을 한꺼번에 지정할 수 있는 단축 속성
+            flex-direction, flex-wrap의 순으로 한칸 떼고 써주시면 됩니다
+        - justify : 메인축 방향으로 정렬
+        - align : 수직축 방향으로 정렬
+        ex) flex-flow: row wrap;
+            아래의 두 줄을 줄여 쓴 것 
+            flex-direction: row; 
+            flex-wrap: wrap; 
+
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" style ="background-color: red;font-weight: bold;"> 안녕하세요 </div>
+        <div class="item" style ="background-color: yellow;font-weight: bold;"> 플렉스입니다 </div>
+        <div class="item" style ="background-color: greenyellow;font-weight: bold;"> 반가워요 </div>
+    </div>
+</body>
+</html>
