@@ -2,6 +2,7 @@ package com.board.test.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Delete;
 import org.mybatis.spring.annotation.MapperScan;
 
 import com.board.test.domain.Board;
@@ -16,5 +17,9 @@ public interface BoardMapper {
 	
 	public Board boardContent(int b_num);
 	
+	@Delete("delete from tbl_board where b_num = #{b_num}")
+	public int boardDelete(int b_num);
+	
+	public int boardUpdate(Board vo);
 	
 }

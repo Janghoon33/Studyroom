@@ -21,10 +21,18 @@
 </style>
 </head>
 <script type="text/javascript">
+
   	function goList(){
   		location.href='/boardList'
   	}
   	
+  	function goDelete(b_num){
+  		location.href = '/boardDelete.do?b_num=' + b_num
+  	}
+  	
+  	function goUpdate(b_num){
+  		location.href = '/boardGoUpdate.do?b_num=' + b_num;
+  	}
   </script>
   
 <body>
@@ -58,9 +66,12 @@
 	  		<tr>
 	  			<td colspan="2" align="center">
 	  				<button onClick="goList();">목록</button>
+	  				<button onClick="goDelete(${board.b_num})">삭제</button>
+	  				<button onClick="goUpdate(${board.b_num})">수정</button>
 	  			</td>
 	  		</tr>
+	  				
 	  	</table>
-	
+	  	
 </body>
 </html>

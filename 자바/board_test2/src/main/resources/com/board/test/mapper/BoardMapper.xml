@@ -16,5 +16,10 @@
 		where b_num = #{b_num}
 	</select>
 	
+	<update id="boardUpdate" parameterType="com.board.test.domain.Board">
+		update tbl_board
+		set b_title = #{b_title}, b_content = #{b_content}
+		where b_num = #{b_num}
+	</update>
 
 </mapper>

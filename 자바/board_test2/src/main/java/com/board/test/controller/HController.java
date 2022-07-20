@@ -72,5 +72,37 @@ public class HController {
 		
 		return "boardContent";
 	}
+	
+	@RequestMapping("boardDelete.do")
+	public String boardDelete(int b_num) {
+		
+		mapper.boardDelete(b_num);
+		
+		return "redirect:/boardList";
+	}
 
+	@RequestMapping("/boardGoUpdate.do")
+	public String boardGoUpdate(int b_num, Model model) {
+		
+		Board vo = mapper.boardContent(b_num);
+		
+		model.addAttribute("board",vo);
+		
+		return "boardUpdate";
+	}
+	
+	@RequestMapping("/boardUpdate.do")
+	public String boardUpdate(Board vo) {
+		
+		mapper.boardUpdate(vo);
+		
+		return "redirect:/boardList.do";
+		
+	}
+	
+	
+	
+	
+	
+	
 }
