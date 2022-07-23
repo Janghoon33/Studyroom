@@ -1,27 +1,27 @@
 const message = [
     {
-        request: "1번",
-        response:"배고파 밥줘 멍🐶"
+        request: "안녕하세요",
+        response:"반갑다 멍🐶"
     },
     {
-        request:"2번",
-        response:"뭐🐶🐶"
+        request:"날씨가 좋네요",
+        response:"야 밖에 비온다 🐶🐶"
     },
     {
-        request:"3번", // 이미지 보여주면서 설명
+        request:"콩아 나와라!!", 
         response:"멍멍멍🐶🐶🐶" 
     },
     
     {
-        request:"4번",
-        response:"🐶🐶🐶🐶"
+        request:"배고프다",
+        response:"국밥에 쐬주 ㄱ?"
     },
     {
-        request:"5번", // 링크 보여주기
-        response:"🐶🐶🐶🐶🐶" 
+        request:"코딩공부 어디서 하지?", 
+        response:"코딩공부는 역시 병갑 블로그!!!" 
     },
     {
-        request:"6번",
+        request:"재롱부려봐",
         response:"🐶🐶🐶🐶🐶🐶" 
     }
 ];
@@ -43,8 +43,6 @@ const message = [
     const imgWrapper = document.querySelector(".img-baloon__wrapper");
     const img = imgWrapper.querySelector("img");
     
-    const report = document.querySelector(".pre__report");
-    const reportContent = report.querySelectorAll(".report-flex");
     
     function handlerSumbit(target){
         
@@ -53,44 +51,43 @@ const message = [
             const li = document.createElement("li");
             let inputValue = target.value;
             console.log("데이터",inputValue)
-            // inputBtn.value = '';
             ul.appendChild(li);
-            // message[0].request
             if(inputValue === message[0].request){
                 console.log("실행1")
-                report.style.display = "none";
                 imgWrapper.style.opacity = 0;
                 ul.querySelector("li").innerText = message[0].response;
             } else if(inputValue === message[1].request) {
                 console.log("실행2")
                 console.log(2)
-                report.style.display = "none";
                 ul.querySelector("li").innerText = message[1].response;
-                // setTimeout(function(){
-                //     block.style.display ="flex";
-                //     ul.querySelector("li").innerText = "뭐";
-                // },2000);
+                
             } else if(inputValue === message[2].request){
                 console.log("실행3")
                 //이미지 보여주기
-                report.style.display = "none";
                 imgWrapper.style.opacity = 1;
                 ul.querySelector("li").innerText = message[2].response;
             } else if(inputValue ===  message[3].request){
                 console.log("실행4")
-                report.style.display = "none";
                 imgWrapper.style.opacity = 0;
                 ul.querySelector("li").innerText = message[3].response;
             } else if(inputValue ===  message[4].request){
                 console.log("실행5")
-                report.style.display = "none";
                 imgWrapper.style.opacity = 0;
                 ul.querySelector("li").innerText = message[4].response;
+                let typerwriter2 = new Typerwriter(ul.querySelector("li"))
+                typerwriter2
+                .typeString()
+                .pauseFor(1300)
+                .start();
             } else if(inputValue ===  message[5].request){
                 console.log("실행6")
-                report.style.display = "none";
                 imgWrapper.style.opacity = 0;
-                ul.querySelector("li").innerText = message[5].response;
+                // ul.querySelector("li").innerText = message[5].response;
+                let typewriter1 = new Typewriter(ul.querySelector("li"));
+                typewriter1
+                .typeString("귀찮음")
+                .pauseFor(1300)
+                .start();
             } else {
                 console.log("실행7")
                 report.style.display = "none";
@@ -112,13 +109,6 @@ const message = [
     
     
     
-    
-    // inputText.addEventListener("submit",handlerSumbit);
-     //inputBtn.addEventListener("click",handlerSumbit(target));
-    // inputBtn.addEventListener("click",function(e){
-    //     e.preventDefault();
-    //     block.style.display = "none";
-    // })
 
 
     
