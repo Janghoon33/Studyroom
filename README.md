@@ -14,9 +14,9 @@
 ## 3. 공부중인 언어 or 라이브러리 🚀
 * CSS (92%) - flex, grid 공부중
 * Spring (15%) 
-* JavaScript (45%) 
-* React (5%)  
-* Spring boot (10%) - 프로젝트 하면서 공부중!
+* JavaScript (45%) - 챗봇 만들어보는중
+* React (7%)  
+* Spring boot (10%) - 프로젝트 하면서 공부중! + 리액트랑 연동해보기 시도중
 * Aws (0%) - 공부할지 고민중🤔 
 
 ## 4. 현재 개발환경
