@@ -14,7 +14,11 @@
   color: white;
   padding-left: 20px;
 }
-
+.list{
+  padding-left: 20px;
+  text-align: left;
+  border-bottom: 1px solid grey;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
