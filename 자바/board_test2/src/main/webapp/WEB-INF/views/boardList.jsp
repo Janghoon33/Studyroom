@@ -46,7 +46,6 @@
 			<td><%=board.getB_content() %></td>
 			<td><%=board.getB_writer() %></td>
 			<td><%=board.getB_date() %></td>
-			<td><%=board.getB_file() %></td>
 		</tr>
 		<%
 			}

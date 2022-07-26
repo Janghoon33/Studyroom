@@ -6,9 +6,9 @@
 		select * from tbl_board
 	</select>
 	
-	<insert id="writeAction" parameterType="com.board.test.domain.Board">
+	<insert id="insertBoard" parameterType="com.board.test.domain.Board">
 		insert into tbl_board( b_title, b_content, b_writer, b_date)
-		values ( #{param1}, #{param2}, "jh", now())
+		values ( #{b_title}, #{b_content}, "jh", now())
 	</insert>
 	
 	<select id="boardContent" resultType="com.board.test.domain.Board">

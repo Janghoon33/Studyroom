@@ -3,7 +3,6 @@ package com.board.test.database;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
 import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;

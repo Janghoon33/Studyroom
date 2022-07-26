@@ -13,7 +13,7 @@ public interface BoardMapper {
 	public List<Board> boardList();
 	
 	
-	public int writeAction(String b_title, String b_content);
+	public int insertBoard(Board board);
 	
 	public Board boardContent(int b_num);
 	
