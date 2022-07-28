@@ -17,6 +17,7 @@ public class Comment {
 	private int c_num;
 	
 	
+	@NonNull
 	private int b_num;
 	
 
@@ -31,5 +32,12 @@ public class Comment {
 	@NonNull
 	private String mem_id;
 		
+	
+	public String toCom() {
+	      return "Comment [c_content=" + c_content+ ", b_num=" + b_num + "]";
+	   }
+	
+	
+	
 }
 	

@@ -61,9 +61,9 @@ public class RController {
 	}
 	
 	@PostMapping("/api/comment")
-	public List<Comment> comment(){
-		List<Comment> comment = cmapper.CommentList();
-		System.out.println("´ñ±Û");
+	public List<Comment> comment(@RequestBody int num){
+		List<Comment> comment = cmapper.CommentList(num);
+		System.out.println("´ñ±Û º¸±â");
 		return comment;
 	}
 	
@@ -72,5 +72,12 @@ public class RController {
 		System.out.println("´ñ±Û ÀÛ¼º!");
 		return service.insertComment(comment);
 	}
+	
+	@PostMapping("/api/commentDelete")
+	public int commentDelete(@RequestBody int num) {
+		System.out.println("´ñ±Û »èÁ¦");
+		return service.deleteComment(num);
+	}
+	
 	
 }

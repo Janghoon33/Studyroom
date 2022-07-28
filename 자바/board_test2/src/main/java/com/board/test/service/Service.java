@@ -31,4 +31,8 @@ public class Service {
 	public int insertComment(Comment comment) {
 		return cmapper.insertComment(comment);
 	}
+	
+	public int deleteComment(int c_num) {
+		return cmapper.deleteComment(c_num);
+	}
 }
