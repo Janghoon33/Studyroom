@@ -1,0 +1,203 @@
+.App {
+    text-align: center;
+  }
+  
+  .movie-container {
+    margin: 0 auto;
+    width: 80%;
+    border: 1px solid #333;
+    padding: 10px 0 30px 0;
+    border-radius: 5px;
+    margin-bottom : 50px;
+  }
+  
+  .form-wrapper{
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  .title-input {
+    width: 500px;
+    height: 40px;
+    margin: 10px;
+  }
+  
+  .submit-button1 {
+    background-color: #f64e60;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    width: 140px;
+    height: 48px;
+    margin-top: 10px;
+    margin-right: 20px;
+    border-radius: 5px;
+  }
+  .submit-button2 {
+    background-color: #f64e60;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    width: 140px;
+    height: 48px;
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius: 5px;
+  }
+  
+  .ck.ck-editor__editable:not(.ck-editor__nested-editable) {
+    min-height: 400px;
+  }
+  .loginregister__button2 {
+    background-color:rgba(var(--bs-primary-rgb));
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    width: 140px;
+    /* border-radius: 100px; */
+    height: 48px;
+    margin-top: 10px;
+}
+.Logo{
+  width: 500px;
+  height: 350px;
+}
+.Font{
+  font-size: 25px;
+}
+.button1 {
+  background-color: #f64e60;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  width: 160px;
+  border-radius: 40px;
+  height: 48px;
+  margin-top: 10px;
+ margin-right: 5px;
+}
+.button2 {
+  background-color: #f64e60;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  width: 160px;
+  border-radius: 40px;
+  height: 48px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+.ww-3{
+  width: 1000px;
+  z-index:1050;
+  position: relative;
+}
+.a-1{
+  color: red;
+}
+.a-2{
+  font-size: xx-small;
+}
+/* =================================== */
+.z-1{
+  display: block;
+  position: relative;
+  border: 1px solid #777;
+  left: 80px;
+  height: 180px;
+  background-color: white;/*rgba(119, 119, 119, 0.266); */
+  border-radius: 12px;
+}
+.z-2{
+  display: block;
+  position: relative;
+  border: 1px solid #777;
+  margin: auto;
+  height: 180px;
+  background-color: white;
+  border-radius: 12px;
+}
+.z-3{
+  display: block;
+  position: relative;
+  border: 1px solid #777;
+  right: 80px;
+  background-color: white;
+  border-radius: 5px;
+}
+.x-1{
+  display: block;
+  position: relative;
+  border: 1px solid #777;
+  height: 100px;
+  top: 25px;
+}
+.hr{
+  display: block;
+  position: relative;
+  border: 1px solid #777;
+  top: 25px;
+}
+.p-1{
+  display: block;
+  position: relative;
+  top: 10px;
+}
+.bar{
+  height: 30px;
+  background-color: white;
+  border: 1px solid #777;
+}
+.page{
+  margin-left: 490px;
+}
+.gg-2{
+  width: 100%; 
+  height: 100%;
+  background-color: white;
+}
+/* ====녹화 full 영상======================== */
+.cc-3{
+  border: 1px solid #333;
+  width: 100%;
+  height: 500px;
+}
+.ling{
+  color: red;
+}
+/* =====메인 배너======================== */
+.d-block{
+  width: 100%;
+  height: 100%;
+}
+.banner-3{
+  height: 415px;
+}
+/* =====로고======================== */
+.logo{
+  width: 100%;
+  height: 100%;
+}
+.fh-3{
+  height: 410px;
+}
+.mm-3{
+  width: 50%;
+}
+/* =====Footer======================== */
+.ff-33{
+  margin-left: 100px;
+}
+.mk-4{
+  display: block;
+  position: relative;
+  width: 50%;
+}
+/* =======img======================== */
+.img{
+  border-radius: 70%;
+}
+.z-1{
+  background-color: rgb(204, 199, 199);
+}
+.z-2{
+  background-color: rgb(204, 199, 199);
+}
+.z-3{
+  background-color: rgb(204, 199, 199);
+}

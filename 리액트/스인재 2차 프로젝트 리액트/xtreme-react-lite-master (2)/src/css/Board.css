@@ -1,0 +1,105 @@
+.a-3{
+    display: block;
+    position: relative;
+    width: 350px;
+    left: 220px;
+    top: 40px;
+}
+.b-3{
+    display: block;
+    position: relative;
+    width: 100px;
+    left: 910px;
+    top: 10px;
+}
+.re-3{
+    text-decoration: none;
+}
+.de-3{
+    text-decoration: none;
+}
+.br-3{
+    border: 1px solid #777;
+    width: 800px;
+    height: 270px;
+    margin: auto;
+    background-color: white;
+}
+.cr-3{
+    border: 1px solid #777;
+    width: 800px;
+    height: 50px;
+    margin: auto;
+}
+.a1{
+    display: block;
+    position: relative;
+    margin-left: 10px;
+    top: 10px;
+}
+.a2{
+    display: block;
+    position: relative;
+    margin-left: 680px;
+    bottom: 10px;
+}
+/* ===========댓글================== */
+.q-1{
+    width: 695px;
+    margin-left: 210px;        
+}
+.q-2{
+    display: block;
+    position: relative;
+    height: 40px;
+    left: 915px;
+    bottom: 55px;
+}
+.q-3{
+    width: 800px;
+    margin-left: 210px;
+    border: 1px solid #777;  
+}
+/* ===========댓글 상자================== */
+.writer{
+    display: block;
+    position: relative;
+    left: 10px;
+    top: 10px;
+}
+.date{
+    display: block;
+    position: relative;
+    left: 690px;
+    top: 10px;
+}
+.content{
+    display: block;
+    position: relative;
+    left: 10px;
+    bottom: 10px;
+}
+.tweet{
+    display: block;
+    position: relative;
+    background-color: white;
+}
+.back-3{
+    margin-left: 910px;
+    width: 90px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgba(var(--bs-primary-rgb));
+    color: white;
+}
+/* ===========게시판 메인================== */
+.em-3{
+    text-decoration: none;
+}
+.fhdn{
+    margin-left: 490px;
+    margin-top: 22px;
+}
+.z{
+    height: 50px;
+}
