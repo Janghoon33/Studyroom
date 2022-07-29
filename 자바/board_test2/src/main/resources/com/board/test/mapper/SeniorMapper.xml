@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.board.test.mapper.SeniorMapper">
+
+   <select id="seniorList" resultType="com.board.test.domain.Senior">
+      select * from tbl_senior  where mem_id = #{mem_id}
+   </select>
+   
+   <insert id="seniorInsert" parameterType="com.board.test.domain.Senior">
+      insert into tbl_senior(S_name,S_birth,S_gender,S_phone,S_address,S_care,mem_id)
+      values (#{S_name}, #{S_birth}, #{S_gender},#{S_phone},#{S_address},#{S_care},#{mem_id})
+   
+   </insert>
+   
+   
+
+
+</mapper>

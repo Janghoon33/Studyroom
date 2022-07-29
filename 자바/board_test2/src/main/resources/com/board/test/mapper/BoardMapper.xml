@@ -8,7 +8,7 @@
 	
 	<insert id="insertBoard" parameterType="com.board.test.domain.Board">
 		insert into tbl_board( b_title, b_content, b_writer, b_date)
-		values ( #{b_title}, #{b_content}, "jh", now())
+		values ( #{b_title}, #{b_content}, #{b_writer}, now())
 	</insert>
 	
 	<select id="boardContent" resultType="com.board.test.domain.Board">

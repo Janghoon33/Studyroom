@@ -29,7 +29,7 @@ public class Board {
 	// 내용
 	@NonNull
 	private String b_content;
-		
+	
 	// 작성자
 	@NonNull
 	private String b_writer;

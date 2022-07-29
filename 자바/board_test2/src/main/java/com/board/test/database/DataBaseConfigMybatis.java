@@ -43,7 +43,9 @@ public class DataBaseConfigMybatis {
 		sqlSession.setDataSource(batisDataSource);
 		sqlSession.setConfigLocation(applicationContext.getResource("classpath:mybatis-config.xml")); //mybatis-config.xml의 경로
 		sqlSession.setMapperLocations(applicationContext.getResources("classpath:/com/board/test/mapper/BoardMapper.xml")); //쿼리문을 관리하는 mapper의 경로
-		
+	      sqlSession.setMapperLocations(applicationContext.getResources("classpath:/com/board/test/mapper/MemberMapper.xml"));
+	      sqlSession.setMapperLocations(applicationContext.getResources("classpath:/com/board/test/mapper/SeniorMapper.xml"));
+	      
 		return sqlSession.getObject();
 	}
 	

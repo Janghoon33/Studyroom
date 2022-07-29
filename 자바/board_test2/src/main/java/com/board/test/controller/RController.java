@@ -13,8 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.board.test.domain.Board;
 import com.board.test.domain.Comment;
+import com.board.test.domain.Member;
+import com.board.test.domain.Senior;
 import com.board.test.mapper.BoardMapper;
 import com.board.test.mapper.CommentMapper;
+import com.board.test.mapper.SeniorMapper;
 import com.board.test.service.Service;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -31,6 +34,8 @@ public class RController {
 
 	@Autowired
 	CommentMapper cmapper;
+	@Autowired
+	SeniorMapper smapper;
 	
 	@PostMapping("/api/board")
 	public List<Board> board() {
@@ -79,5 +84,47 @@ public class RController {
 		return service.deleteComment(num);
 	}
 	
+	@PostMapping("/api/memberInsert")
+	   public int insertMember(@RequestBody Member mem) {
+	      System.out.println(">>>> Member Request");
+	      System.out.println(">>>> param : " + mem.toString());
+	      return service.insertMember(mem);
+	   }
+	   
+	   @GetMapping("/api/memberLogin")
+	   public void selectOneMember(){}
+	   
+	   @PostMapping("/api/memberLogin")
+	   public Member selectOneMember(@RequestBody Member mem){
+//	      mem = service.selectOneMember(mem);
+//	      if(mem != null) {
+//	         session.setAttribute("mem", mem);
+//	      }
+	      System.out.println(">>>> Login");
+	      System.out.println(">>>> param : " + mem.toLogin());
+	      
+	      Member vo = service.selectOneMember(mem);
+	      
+	      return vo;
+	   }
+	   
+	   @PostMapping("/api/member")
+	   public Member selectAllMember(@RequestBody Member mem) {
+	      mem = service.selectAllMember(mem);
+	      return mem;
+	   }
+	   @PostMapping("/api/seniorList")
+	   public List<Senior> senior(@RequestBody String mem_id) {
+	      System.out.println("노인상세");
+
+	      List<Senior> senior = smapper.seniorList();
+	      System.out.println(">>>> param : " + senior.toString());
+	      return senior;
+	   }
 	
+		@PostMapping("/api/seniorInsert")
+		public int commentInsert(@RequestBody Senior senior) {
+			System.out.println("시니어 등록!");
+			return service.seniorInsert(senior);
+		}
 }

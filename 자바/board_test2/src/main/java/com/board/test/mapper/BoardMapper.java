@@ -17,7 +17,7 @@ public interface BoardMapper {
 	
 	public Board boardContent(int b_num);
 	
-	@Delete("delete * from tbl_board where b_num = #{b_num}")
+	@Delete("delete from tbl_board where b_num = #{b_num}")
 	public int boardDelete(int b_num);
 	
 	public int boardUpdate(Board vo);

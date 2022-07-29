@@ -8,7 +8,7 @@
 	
 	<insert id="insertComment" parameterType="com.board.test.domain.Comment">
 		insert into tbl_comment(b_num, c_content,c_date,mem_id)
-		values (#{b_num}, #{c_content}, now(),"jh" )
+		values (#{b_num}, #{c_content}, now(),#{mem_id} )
 	</insert>
 	
 	  <delete id="deleteComment" parameterType="int">
