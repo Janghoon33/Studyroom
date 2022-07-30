@@ -1,4 +1,5 @@
 import { Card,CardBody } from "reactstrap";
+import 'css/lest.css';
 
 function Process() {
     return(
@@ -6,8 +7,8 @@ function Process() {
             <Card>
                 <CardBody>
                     <img 
-                        className="Processimg"
-                        src="img/process1.png"
+                        className="ii"
+                        src="img/프44.png"
                         alt="Process img"
                     />
                 </CardBody>

@@ -6,23 +6,43 @@ import 'css/lest.css';
 // import Bar from 'modals/Bar';
 import Pagination from 'modals/Pagination';
 import RecordModal from 'modals/RecordModal';
+import 'css/lest.css';
 
 
 function AutoLayoutExample() {
   const [RecordModalOn, setRecordModalOn] = useState(false);
+  const mem_id = sessionStorage.getItem('mem_id')
+  const mem_address = sessionStorage.getItem('mem_address')
+  const mem_name = sessionStorage.getItem('mem_name')
+  const mem_phone = sessionStorage.getItem('mem_phone')
+    
+  
+  if(mem_id === null ){
+      return(
+      <>
+      <div className='dd'>
+        <br></br>
+        <center><h5>로그인 후 이용가능합니다.</h5></center>
+        <hr></hr>
+        <button className='one' type='button'>로그인</button><button className='two' type='button'>회원가입</button>
+      </div>
+      </>
+      )
+    } 
+    
+    
+    else{
   return (
     <>
-    <RecordModal show={RecordModalOn} onHide={()=>setRecordModalOn(false)}/>
-    <Container>
-      <center><h1>🎥 record 🎬</h1></center>
-      {/* <Bar></Bar> */}
-      <hr></hr>
-      <br></br>
-      <Row>
+     <RecordModal show={RecordModalOn} onHide={()=>setRecordModalOn(false)}/>
+   <div>
+    <center><h2>Video Save</h2></center>
+    <hr></hr>
+    <Row>
         <Col className='z-1' md="3">
           <div className='x-1'>
             
-              <img src="img/car.png" className='gg-2' onClick={()=>setRecordModalOn(true)}></img>
+              <img src="img/record.png" className='gg-2' onClick={()=>setRecordModalOn(true)}></img>
            
           </div>
           <hr className='hr'></hr>
@@ -30,7 +50,7 @@ function AutoLayoutExample() {
         </Col>
         <Col className='z-2' md="3"><div className='x-1'>
          
-              <img src="img/로고.png" className='gg-2' onClick={()=>setRecordModalOn(true)}></img>
+              <img src="img/record.png" className='gg-2' onClick={()=>setRecordModalOn(true)}></img>
           
           </div>
           <hr className='hr'></hr>
@@ -70,12 +90,12 @@ function AutoLayoutExample() {
       </Row>
       <br></br>
       <br></br>     
-    </Container>
-    <div className="page">
+   </div>
+   <div className="page">
     <Pagination></Pagination>
     </div>
     </>
-  );
+  )}
 }
 
 export default AutoLayoutExample;

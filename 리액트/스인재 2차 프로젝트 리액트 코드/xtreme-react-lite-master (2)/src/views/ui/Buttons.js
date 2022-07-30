@@ -18,6 +18,10 @@ function BoardList(){
         const state = useLocation().state;
         let num = parseInt(state.b_num)
         console.log("데이터",state.b_num);
+        const mem_id = sessionStorage.getItem('mem_id')
+        const mem_address = sessionStorage.getItem('mem_address')
+        const mem_name = sessionStorage.getItem('mem_name')
+        const mem_phone = sessionStorage.getItem('mem_phone')
         
         const [board, setBoard] = useState({});
         console.log(board)
@@ -52,12 +56,35 @@ function BoardList(){
         
         }
 
+        if(mem_id === board.b_writer || mem_id === 'admin'){
         return (
             <div key={state.b_num}>
+                    {console.log("3333333333333")}
+                    <div className="a-3"><h3> {board.b_title}</h3></div> 
+                    <div className="b-3">
+                    <Link to="/Table"><a onClick={(e)=>removeBoard() } > 삭제 </a></Link></div>
+                    <hr></hr>
+                    <div className="br-3">{board.b_content}</div>
+                    <div className="cr-3">
+                        <span className="a1">🕐 {board.b_date}</span>
+                        <span className="a2">작성자 : {board.b_writer}</span>
+                    </div>
+                    <br></br>
+                    <Comment data={num}></Comment>
+                    <br></br>
+                    <Link to="/Table">
+                    <button type="button" className="back-3">목록으로</button>
+                    </Link>
+                </div>
+        )}
+
+        else{
+            return (
+                <div key={state.b_num}>
                 {console.log("3333333333333")}
-                <div className="a-3"><h1> 제목 : {board.b_title}</h1></div> 
-                <div className="b-3"><Link to="/Badges"> 수정  </Link> 
-                <Link to="/Table"><button onClick={(e)=>removeBoard() } > 삭제 </button></Link></div>
+                <div className="a-3"><h3> {board.b_title}</h3></div> 
+                <div className="b-3">
+                <a >  </a></div>
                 <hr></hr>
                 <div className="br-3">{board.b_content}</div>
                 <div className="cr-3">
@@ -71,7 +98,8 @@ function BoardList(){
                 <button type="button" className="back-3">목록으로</button>
                 </Link>
             </div>
-        );
+            )
+        }
         }
 
 

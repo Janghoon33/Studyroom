@@ -4,16 +4,17 @@ import Feeds from "../components/dashboard/Feeds";
 import ProjectTables from "../components/dashboard/ProjectTable";
 import TopCards from "../components/dashboard/TopCards";
 import Blog from "../components/dashboard/Blog";
-import bg1 from "../assets/images/bg/bg1.jpg";
-import bg2 from "../assets/images/bg/bg2.jpg";
-import bg3 from "../assets/images/bg/bg3.jpg";
-import bg4 from "../assets/images/bg/bg4.jpg";
+import img from "../assets/images/bg/img.jpg";
+import img2 from "../assets/images/bg/img2.jpg";
+import img3 from "../assets/images/bg/img3.jpg";
+import img4 from "../assets/images/bg/img4.jpg";
 import Process from "components/dashboard/Process";
 import Int from "Main/Int";
+import 'css/lest.css';
 
 const BlogData = [
   {
-    image: bg1,
+    image: img,
     title: "낙상 사고 예방법",
     subtitle: "어르신 낙상 주의보!",
     description:
@@ -21,7 +22,7 @@ const BlogData = [
     btnbg: "primary",
   },
   {
-    image: bg2,
+    image: img2,
     title: "영유아 낙상 사고",
     subtitle: "영아 안전사고 92% 가정에서 발생",
     description:
@@ -29,7 +30,7 @@ const BlogData = [
     btnbg: "primary",
   },
   {
-    image: bg3,
+    image: img3,
     title: "낙상 케어",
     subtitle: "낙상 감지··· 골든타임 방지",
     description:
@@ -37,7 +38,7 @@ const BlogData = [
     btnbg: "primary",
   },
   {
-    image: bg4,
+    image: img4,
     title: "낙상 피해",
     subtitle: "몸이 불편한 사람들",
     description:
@@ -64,7 +65,7 @@ const Starter = () => {
         <TopCards
           bg="bg-light-danger text-danger"
           title="Refunds"
-          subtitle="카카오톡으로 알림 서비스"
+          subtitle="웹으로 통한 알림 서비스"
           earning=" 알림"
           icon="bi bi-bell"
         />

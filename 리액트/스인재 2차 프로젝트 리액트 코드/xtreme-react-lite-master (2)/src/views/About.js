@@ -1,45 +1,75 @@
 import React, {useEffect, useState} from 'react'
 import "css/LoginRegister.css"
-import { Link, useLocation } from "react-router-dom";
+import { Link, Navigate, useLocation } from "react-router-dom";
+import Axios from "axios";
+import $ from "jquery";
+import Header from 'layouts/Header'; 
+import App from 'App';
 
-function Login(props) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState(""); 
+function Login() {
+  const [inputId, setInputId] = useState("");
+  const [inputPw, setInputPw] = useState(""); 
 
-  console.log(props.text)
 
-  const onEmailHandler = (event) => {
-    setEmail(event.currentTarget.value);
+  const onEmailHandler = (e) => {
+    setInputId(e.target.value);
   }
 
-  const onPasswordHandler = (event) => {
-    setPassword(event.currentTarget.value)
+  const onPasswordHandler = (e) => {
+    setInputPw(e.target.value)
 }
 
-const onSubmit = (event) => {
-    event.preventDefault()
-    if(password !== confirmPassword) {
-      return alert('비밀번호와 비밀번호확인은 같아야 합니다.');
-    }
-  }
-  let i=1 // 로그인 로고 지우기 = 0, 보이기 = 1
+
+
+
+  let param = {};
+
+  useEffect(()=>{
+  
+
+  
+    $(".loginregister__button1").on('click',function () {      //마우스 누를떼 
+
+      param.mem_id = $("div.loginregister__id > input:eq(0)").val()
+      param.mem_pw = $("div.loginregister__pw > input:eq(0)").val()
+
+
+      console.log(param);
+      
+      Axios.post("/api/memberLogin",param).then((res)=>{
+        console.log("리턴",res);
+        sessionStorage.setItem('mem_id', res.data.mem_id);
+        sessionStorage.setItem('mem_name', res.data.mem_name);
+        sessionStorage.setItem('mem_phone', res.data.mem_phone);
+        sessionStorage.setItem('mem_address', res.data.mem_address);
+        // let user = sessionStorage.getItem('mem_id');
+        // console.log("id",user);
+        
+      // 작업 완료 되면 페이지 이동(새로고침)
+       document.location.href = '/'
+      });
+      
+    });
+
+    
+
+  },[]);
    return (
     <div className="loginregister2"> 
         <form>
             <center className="title1"><h1> Login </h1></center>
             <br></br>
             <br></br>
-            <br></br>
-            <div><input name="email" type="email" placeholder="이메일" value={email} onChange={onEmailHandler} className="loginregister__input"/></div>
-            <div><input name="password" type="password" placeholder="비밀번호" value={password} onChange={onPasswordHandler} className="loginregister__input"/></div>
-            <br></br>
+            <div className="loginregister__id"><input name="mem_id" type="text" placeholder="아이디" value={inputId} onChange={onEmailHandler} className="loginregister__input"/></div>
+            <div className="loginregister__pw"><input name="mem_pw" type="password" placeholder="비밀번호" value={inputPw} onChange={onPasswordHandler} className="loginregister__input"/></div>
             <br></br>
             <br></br>
             <div>
-            {i===1?<button type="submit" onSubmit={onSubmit} className="loginregister__button1">로그인</button>:null}  {/*로그인 설계*/}
-            <Link to="/Breadcrumbs"><button type="button" className="loginregister__button5">회원가입 하기</button></Link></div>
+            <Link to="/"><button type="submit" className="loginregister__button1" >로그인</button></Link>
+            <Link to="/Breadcrumbs"><button type="button" className="loginregister__button5">회원가입</button></Link></div>
         </form>
       </div>
+      
   );
 };
 

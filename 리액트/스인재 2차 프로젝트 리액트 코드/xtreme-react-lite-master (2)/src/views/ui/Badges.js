@@ -11,6 +11,10 @@ import $ from "jquery";
 // 게시글 작성 Page
 
 function Review() {
+  const mem_id = sessionStorage.getItem('mem_id')
+  const mem_address = sessionStorage.getItem('mem_address')
+  const mem_name = sessionStorage.getItem('mem_name')
+  const mem_phone = sessionStorage.getItem('mem_phone')
 
 let param = {};
 
@@ -19,6 +23,7 @@ useEffect(()=>{
     $(".submit-button2").on('click',function (){
         param.b_title = $("div.form-wrapper > input:eq(0)").val()
         param.b_content = $("textarea.b_cont").val()
+        param.b_writer = (sessionStorage.getItem('mem_id'))
         console.log("=======================gd")
         console.log(param);
         console.log($("div.form-wrapper > input:eq(0)").val());
@@ -37,7 +42,7 @@ useEffect(()=>{
 
 return (
 <div className="App">
-  <h1>글 작성하기</h1>
+  <h1>Use Review</h1>
   
   <div className='form-wrapper'>
     <input className="title-input" 
@@ -46,10 +51,12 @@ return (
             // onChange={getValue}
             name='b_title'
     />
-    <textarea className="b_cont" rows="15" cols="15">
+    <br></br>
+    <textarea className="b_cont" rows="15" cols="90">
     </textarea>
   
   </div>
+  <br></br>
   <Link to="/Table">
               <button type="button" className="submit-button1">
                     목록
@@ -57,7 +64,7 @@ return (
  </Link>
 
  <Link to="/Table"> 
-  <button type="submit" className="submit-button2">작성</button>
+  <button type="submit" className="submit-button2">작성하기</button>
  </Link>
 </div>
 );

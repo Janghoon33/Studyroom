@@ -17,6 +17,7 @@ const navigation = [
     href: "/starter",
     icon: "bi bi-speedometer2",
   },
+  
   // {
   //   title: "Alert",
   //   href: "/alerts",
@@ -33,7 +34,7 @@ const navigation = [
   //   icon: "bi bi-hdd-stack",
   // },
   {
-    title: "Cards",
+    title: "Senior Care",
     href: "/cards",
     icon: "bi bi-card-text",
   },
@@ -43,7 +44,7 @@ const navigation = [
   //   icon: "bi bi-columns",
   // },
   {
-    title: "Table",
+    title: "Board",
     href: "/table",
     icon: "bi bi-layout-split",
   },
@@ -96,6 +97,12 @@ const Sidebar = () => {
   };
   let location = useLocation();
 
+  const mem_id = sessionStorage.getItem('mem_id')
+  const mem_address = sessionStorage.getItem('mem_address')
+  const mem_name = sessionStorage.getItem('mem_name')
+  const mem_phone = sessionStorage.getItem('mem_phone')
+
+    if(mem_id === null ){
   return (
     <div className="p-3">
       <div className="d-flex align-items-center">
@@ -119,7 +126,16 @@ const Sidebar = () => {
               className="img"
               width="50"
             ></img>
-      <span> 나태린님 환영합니다.</span>
+      <span>  <Link to="/About">
+              <button type="button" 
+              className="lo" 
+              style={{marginRight:15, 
+                borderStyletype:"solid",
+                borderRadius: 5}}>
+                 
+                 GUEST
+              </button>
+            </Link> </span>
      </div>
      <hr></hr>
           {/* 기존자리 */}
@@ -151,7 +167,66 @@ const Sidebar = () => {
       </div>
       {/* =========================================================================== */}
     </div>
-  );
+  )}
+  else{
+    return (
+      <div className="p-3">
+        <div className="d-flex align-items-center">
+          <Logo />
+          <Button
+            close
+            size="sm"
+            className="ms-auto d-lg-none"
+            onClick={() => showMobilemenu()}
+          ></Button>
+        </div>
+        {/* =========================================================================== */}
+       
+        <div>  {/* className="pt-4 mt-2" 원래 클래스 네임*/}
+          <Nav vertical className="sidebarNav">
+            <hr></hr>
+        <div>
+            <img
+                src={user1}
+                alt="profile"
+                className="img"
+                width="50"
+              ></img>
+        <span> {mem_name}님 환영합니다.</span>
+       </div>
+         {/* =========================================================================== */}
+       <hr></hr>
+            {/* 기존자리 */}
+            {navigation.map((navi, index) => (
+              <NavItem key={index} className="sidenav-bg">
+                <Link
+                  to={navi.href}
+                  className={
+                    location.pathname === navi.href
+                      ? "text-primary nav-link py-3"
+                      : "nav-link text-secondary py-3"
+                  }
+                >
+                  <i className={navi.icon}></i>
+                  <span className="ms-3 d-inline-block">{navi.title}</span>
+                </Link>
+              </NavItem>
+            ))}
+          {/* =========================================================================== */}
+                  
+            <li>
+              {/* onClick={()=>test()} <Button className="loginregister__button2">Q&A</Button> */}
+            </li>
+            
+            {testData===true ? <Alerts href="#"> Chat-bot </Alerts> : <div></div>}
+            
+          {/* =========================================================================== */}
+          </Nav>
+        </div>
+        {/* =========================================================================== */}
+      </div>
+    )
+  }
 };
 
 export default Sidebar;

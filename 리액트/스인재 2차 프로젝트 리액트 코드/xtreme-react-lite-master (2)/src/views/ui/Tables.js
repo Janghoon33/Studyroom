@@ -11,7 +11,10 @@ const Tables = () => {
   // 게시글 목록 페이지
   const navigate = useNavigate();
   const [board, setBoard] = useState([]);
-  
+  const mem_id = sessionStorage.getItem('mem_id')
+  const mem_address = sessionStorage.getItem('mem_address')
+  const mem_name = sessionStorage.getItem('mem_name')
+  const mem_phone = sessionStorage.getItem('mem_phone')
   useEffect(()=>{
 
     Axios.post("/api/board").then((response)=>{
@@ -44,7 +47,7 @@ const Tables = () => {
       },
     })
   };
-
+if(mem_id === null){
   return (
     
     <Row>
@@ -52,7 +55,7 @@ const Tables = () => {
         <Card>
           <CardTitle tag="h6" className="border-bottom p-3 mb-0">
             <i className="bi bi-card-text me-2"> </i>
-            문의게시판<Link to="/Badges"><button className="B_writebtn" style={{position:"relative", left:950, borderRadius: 5, height: 35}}>글 쓰기 💌</button></Link>
+            문의게시판
           </CardTitle>
           <CardBody className="">
             {/* <button onClick={handleClick}>이동</button> */}
@@ -88,7 +91,53 @@ const Tables = () => {
       <Pagination></Pagination>
       </div>
     </Row>
-  );
+  )}
+  else{
+    return (
+    
+      <Row>
+        <Col lg="12">
+          <Card>
+            <CardTitle tag="h6" className="border-bottom p-3 mb-0">
+              <i className="bi bi-card-text me-2"> </i>
+              문의게시판<Link to="/Badges"><button className="bu">글 작성</button></Link>
+            </CardTitle>
+            <CardBody className="">
+              {/* <button onClick={handleClick}>이동</button> */}
+              <Table bordered striped>
+                <thead>
+                  <tr className="z">
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>작성일</th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+                  
+                {
+                    board.map((board,index) => (
+                    <tr className="z">
+                    <th key={index} scope="row">{board.b_num}</th>
+                    {/* <td><Link to="/Buttons" value={board.b_num}  className="em-3"> */}
+                    <td onClick={(e)=>{fn_moveDetail(board.b_num, e)}}>{board.b_title}</td>
+                    <td>{board.b_writer}</td>
+                    <td>{board.b_date}</td>
+                  </tr>
+                  ))
+                  } 
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>
+        </Col>
+        <div className="fhdn">
+        <Pagination></Pagination>
+        </div>
+      </Row>
+    )
+  }
 
 };
 

@@ -19,11 +19,7 @@ const modal = ({show, onHide}) => {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>여따 영상 박을 거임</h4>
-       <p>조절</p>
-       <p>쌉</p>
-       <p>가능</p>
-       <p>어느정도 크기 원해 ㅋ</p>
+      <iframe src="http://59.0.236.92:9000/video_feed" width="700" height="500" url="59.0.124.230:9000/video_feed" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={onHide} className="A">확인</Button>

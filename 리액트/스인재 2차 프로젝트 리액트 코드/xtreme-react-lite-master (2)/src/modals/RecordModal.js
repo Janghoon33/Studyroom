@@ -19,7 +19,7 @@ const RecordModal = ({ show, onHide}) => {
       <Modal.Body>
       <video controls className='video'>
 
-        <source src="video/pang.mp4"
+        <source src="video/video.mp4"
         type="video/mp4"></source>
 
       </video>

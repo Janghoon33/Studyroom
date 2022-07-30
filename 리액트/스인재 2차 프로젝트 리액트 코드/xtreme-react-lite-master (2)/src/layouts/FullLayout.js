@@ -3,7 +3,6 @@ import Sidebar from "./Sidebar";
 import Header from "./Header";
 import { Container } from "reactstrap";
 import 'css/Footer.css';
-import A from 'Main/A';
 
 const FullLayout = () => {
   return (
@@ -24,9 +23,6 @@ const FullLayout = () => {
           </Container>
         </div>
       </div>
-        <div className="footer">
-            <A></A>
-        </div>
     </main>
   );
 };
