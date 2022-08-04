@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.mapper.BoardMapper">
+
+	<!-- SQL 작성 -->
+	<!-- 모든 게시글 가져오기 -->
+	<select 
+	    id="boardList"
+	    resultType="com.smhrd.domain.Board"
+	    >
+	    select * from board
+	</select>
+	
+	<!-- 게시글 작성 -->
+	<insert id="boardInsert" parameterType="com.smhrd.domain.Board" >
+	    insert into board( title, writer, content)
+	    values( #{title}, #{writer}, #{content} )
+	</insert>
+	
+	<select 
+	    id="boardContent"
+	    resultType="com.smhrd.domain.Board">
+	    select * from board
+	    where idx = #{idx}
+	</select>
+	
+	
+	<update 
+	    id="boardUpdate"
+	    parameterType="com.smhrd.domain.Board"
+	    >
+	    	update board
+	    	set title = #{title}, content = #{content}
+	    	where idx = #{idx}
+	    	
+	</update>
+	
+	<update 
+	    id="viewUpdate"
+	    parameterType="com.smhrd.domain.Board"
+	    >
+	    update board
+	    set count = #{count}
+	    where idx = #{idx}
+	</update>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</mapper>
