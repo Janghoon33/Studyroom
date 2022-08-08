@@ -13,8 +13,8 @@
 
 ## 3. 공부중인 언어 or 라이브러리 🚀
 * CSS (92%) - flex, grid 공부중
-* Spring (85%) 
-* JavaScript (65%) - 챗봇 만들어보는중
+* Spring (90%) 
+* JavaScript (80%) 
 * React (20%)  
 * Spring boot (70%) 
 * Aws (0%) - 인.사 에서 공부
