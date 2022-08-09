@@ -1,15 +1,6 @@
 # 나만의 스터디 공간
 ![깃허브 이미지](https://user-images.githubusercontent.com/104408863/179223339-9c3d4617-be56-452b-9632-a7033a8a7111.png)
 
-### Hi I'm Janghoon 👋
-
-🛠️ Stacks
-
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/><img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=HTML&logoColor=white"/><img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=Python&logoColor=white"/><img src="https://img.shields.io/badge/js-F7DF1E?style=flat-square&logo=Python&logoColor=white"/>
-
-
-
-
 ## 1. 목표 
 * 매일 공부해서 공부한 코드 1일 1커밋 🔥
 * 남들이 우와 할만한 코딩 실력 갖추기 ✨😎
