@@ -4,7 +4,11 @@
 ### Hi I'm Janghoon 👋
 
 🛠️ Stacks
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/>
+
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/><img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=HTML&logoColor=white"/><img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=Python&logoColor=white"/><img src="https://img.shields.io/badge/js-F7DF1E?style=flat-square&logo=Python&logoColor=white"/>
+
+
+
 
 ## 1. 목표 
 * 매일 공부해서 공부한 코드 1일 1커밋 🔥
