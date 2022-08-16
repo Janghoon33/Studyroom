@@ -13,11 +13,11 @@
 
 ## 3. 공부중인 언어 or 라이브러리 🚀
 * CSS (92%) - flex, grid 공부중
-* Spring (90%) 
+* Spring (92%) 
 * JavaScript (80%) 
 * React (20%)  
 * Spring boot (70%) 
-* Aws (0%) - 인.사 에서 공부
+* Aws (0%) - 인.사 에서 공부할 예정
 
 ## 4. 현재 개발환경
 |구분|내용|
