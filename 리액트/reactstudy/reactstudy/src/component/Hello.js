@@ -1,5 +1,6 @@
 import World from "./World";
 import styles from "./Hello.module.css";
+import { useState } from "react";
 // const Hello = () => {
 //     <p>Hello</p>
 // }
@@ -7,20 +8,16 @@ import styles from "./Hello.module.css";
 
 
 export default function Hello(){
+    // let name = "Mike";
+    const [name, setName] = useState('Mike');
+
    return (
     // jsx 는 하나의 태그만 사용가능! div나 <></>(빈태그) 태그로 전체를 묶어주기
    <div>  
-    <h1 style={
-        {
-            color : "#f00",
-            borderRight : '2px solid #000',
-            marginBottom : '30px',
-            opacity : 1,
-        }
-    }>
-        Hello
-        </h1>
-        <div className={styles.box}>Hello</div>
+        <h2 id="name">{name}</h2>
+        <button onClick={()=>(
+             setName(name === "Mike" ? "Jane" : "Mike")
+        )}>Change</button>
    </div>
    );
 }
