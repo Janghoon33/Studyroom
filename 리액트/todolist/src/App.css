@@ -1,0 +1,126 @@
+/* .todo-item{
+  width: 300px;
+  height: 50px;
+  border: 1px solid lightblue;
+} */
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	overflow-x: hidden;
+}
+.container {
+	width: 100vw;
+	height: 1000px;
+	background-color: #ff9999;
+	
+}
+h1 {
+	text-align: center;
+	position: relative;
+	top: 50px;
+	color: white;
+	font-family: 'Ubuntu';
+	letter-spacing: 10px;
+  font-size: 33px;
+}
+.list {
+	top: 50px;
+	width: 230px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%); 
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  position: relative;
+}
+.todo-item{
+  position: relative;
+  margin-bottom: 5px;
+}
+li {
+	margin: 50px 0;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 20px;
+	font-weight: bolder;
+  position: relative;
+}
+input {
+	cursor: pointer;
+	position: relative;
+	visibility: hidden;
+  position: relative;
+  margin-top:50px;
+}
+input:after {
+	border: 3px solid lightblue;
+	border-radius: 50%;;
+	content: "";
+	display: block;
+	height: 46px;
+	width: 46px;
+	text-align: center;
+	visibility: visible;
+	transition: all 100ms ease-in-out;
+	background-color: white;
+  position: relative;
+  margin-top: 10px;
+}
+input:checked:after {
+	border: 3px solid lightblue;
+	color: white;
+	font-size: 30px;
+	border-radius: 50%;
+	content: "✘";
+	line-height: 43px;
+	background-color: lightblue;
+	animation: bounce 300ms ease-in-out forwards;
+  position: relative;
+  margin-top: 10px;
+
+}
+input[type=checkbox]:checked ~ label {
+	text-decoration: line-through;
+}
+
+@keyframes bounce {
+	0% {transform: scale(1, 1);}
+	70% {transform: scale(1.1, 1.1);}
+	100% {transform: scale(1, 1);}
+}
+
+label {
+	position: relative;
+	left: 50px;
+	top: 29px;
+  font-weight: bolder;
+  font-size: large;
+}
+
+input[type=text] {
+	border: 2px solid lightblue;
+	width: 250px;
+	height: 30px;
+	visibility: visible;
+	border-radius: 5px;
+	position: relative;
+	left: 50%;
+	top: 20px;
+	transform: translateX(-50%);
+}
+#button {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: bolder;
+	font-size: 40px;
+	color: black;
+	position: relative;
+	left: 210px;
+	top: -18px;
+}
