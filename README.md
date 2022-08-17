@@ -4,17 +4,16 @@
 ## 1. 목표 
 * 매일 공부해서 공부한 코드 1일 1커밋 🔥
 * 남들이 우와 할만한 코딩 실력 갖추기 ✨😎
+* 다 잘하는 풀스택 개발자 👨🏻‍💻🕶️
 
 
 ## 2. 사용가능 언어 or 라이브러리 🤗
-* HTML , CSS 
-* Java  , python
+* HTML , CSS , JavaScript
+* Java  , Spring , python
 * Crawling , Oracle
 
 ## 3. 공부중인 언어 or 라이브러리 🚀
-* CSS (92%) - flex, grid 공부중
-* Spring (92%) 
-* JavaScript (80%) 
+* CSS (95%) - grid 공부중
 * React (20%)  
 * Spring boot (70%) 
 * Aws (0%) - 인.사 에서 공부할 예정
