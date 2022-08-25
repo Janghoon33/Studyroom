@@ -13,8 +13,8 @@
 * Crawling , Oracle
 
 ## 3. 공부중인 언어 or 라이브러리 🚀
-* Node (55%)
-* React (40%)  
+* CSS (95%) - grid 공부중
+* React (35%)  
 * Spring boot (70%) 
 * Aws (0%) - 인.사 에서 공부할 예정
 
@@ -22,6 +22,6 @@
 |구분|내용|
 |------|---|
 |개발도구|Eclipse / VisualStudioCode|
-|서버환경|tomcat 9.0|
+|서버환경|tomcat 9.0, Node.js 16|
 |데이터베이스|Oracle, MYSQL|
 
