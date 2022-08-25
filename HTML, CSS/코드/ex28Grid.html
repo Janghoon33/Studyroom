@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+            font-size: xx-large;
+            border-style: dashed;
+            height: 120px;
+
+        }
+        .container {
+            display: grid;
+            background-color: darkorange;
+            height: 600px;
+            padding: 10px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .item:nth-child(5) {
+                z-index: 1;
+                transform: scale(2);
+            }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" style="background-color: skyblue; font-weight: bold">A</div>
+        <div class="item" style="background-color: skyblue; font-weight: bold">B</div>
+        <div class="item" style="background-color: skyblue; font-weight: bold">C</div>
+        <div class="item" style="background-color: skyblue; font-weight: bold">D</div>
+        <div class="item" style="background-color: skyblue; font-weight: bold">E</div>
+        <div class="item" style="background-color: skyblue; font-weight: bold">F</div>
+        <div class="item" style="background-color: skyblue; font-weight: bold">G</div>
+        <div class="item" style="background-color: skyblue; font-weight: bold">H</div>
+        <div class="item" style="background-color: skyblue; font-weight: bold">I</div> 
+    </div>
+</body>
+</html>
