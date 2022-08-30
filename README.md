@@ -13,7 +13,7 @@
 * Crawling , Oracle
 
 ## 3. 공부중인 언어 or 라이브러리 🚀
-* Node.js (55%)
+* Node.js (70%)
 * React (35%)  
 * Spring boot (70%) 
 * Aws (0%) - 인.사 에서 공부할 예정
