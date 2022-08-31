@@ -16,7 +16,7 @@
 	
 	아이디 : <%=id %><br>
 	나이 : <%=age %>
-	
+	<br>
 	<a href="Ex02removeSession.jsp">세션삭제</a>
 	<a href="Ex02invalidateSession.jsp">세션모두삭제</a>
 </body>

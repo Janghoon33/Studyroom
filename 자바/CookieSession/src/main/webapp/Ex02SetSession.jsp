@@ -17,6 +17,6 @@
 		
 	%>
 	<a href="Ex02GetSession.jsp">세션확인</a>
-	<a href="Ex02GetSession.jsp">세션모두확인</a>
+	<a href="Ex02GetSessions.jsp">세션모두확인</a>
 </body>
 </html>
