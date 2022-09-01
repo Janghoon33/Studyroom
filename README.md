@@ -9,7 +9,7 @@
 
 ## 2. 사용가능 언어 or 라이브러리 🤗
 * HTML , CSS , JavaScript
-* Java  , Spring , python
+* Java  , Spring , python, JSP
 * Crawling , Oracle
 
 ## 3. 공부중인 언어 or 라이브러리 🚀
