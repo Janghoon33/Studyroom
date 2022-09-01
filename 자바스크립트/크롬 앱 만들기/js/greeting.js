@@ -6,14 +6,14 @@ const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
 
 function onLoginSubmit(event){
-    event.preventDefault();
+    event.preventDefault(); // submit의 기본동작은 페이지를 새로고침 하는것이기 때문에 막아준다
     loginForm.classList.add(HIDDEN_CLASSNAME);
     const username = loginInput.value;
     localStorage.setItem(USERNAME_KEY, username)
-    paintGreeting(username);
+    paintGreetings(username);
 }
 
-function paintGreeting(username) {
+function paintGreetings(username) {
     greeting.innerText = `Hello ${username}`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
@@ -26,5 +26,5 @@ if(savedUsername === null){
     loginForm.addEventListener("submit", onLoginSubmit);
 } else {
     // show the greetings
-    paintGreeting(savedUsername);
+    paintGreetings(savedUsername);
 }
