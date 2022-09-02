@@ -9,7 +9,7 @@
 <body>
 	<%
 		// request영역에 값 설정
-		request.setAttribute("nick", "쿠키몬스터");
+		request.setAttribute("nick", "병갑짱");
 		
 		//request영역 값 가지고 오기
 		String nick = (String)request.getAttribute("nick");

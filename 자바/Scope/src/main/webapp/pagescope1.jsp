@@ -9,7 +9,7 @@
 <body>
 	<%
 		//page 영역에 값 설정
-		pageContext.setAttribute("nick", "쿠키몬스터");
+		pageContext.setAttribute("nick", "고병갑");
 	
 		//page 영역에 값 가지고 오기
 		String nick = (String)pageContext.getAttribute("nick");

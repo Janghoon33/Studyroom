@@ -10,7 +10,7 @@
 	<%
 		//세션 영역안에 값 저장
 		//setAttribute(키/네임(String), 실제값/value(Object))
-		session.setAttribute("nick", "쿠키몬스터");
+		session.setAttribute("nick", "병갑짱짱");
 		String nick = (String)session.getAttribute("nick");
 	%>
 	<%=nick %>
