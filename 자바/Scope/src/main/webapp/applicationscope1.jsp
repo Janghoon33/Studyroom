@@ -9,7 +9,7 @@
 <body>
 	<%
 		//application 영역에 값 설정
-		application.setAttribute("nick", "병갑최고");
+		application.setAttribute("nick", "병갑최고!");
 	
 		//application 영역에 값 가지고 오기
 		String nick = (String)application.getAttribute("nick");
