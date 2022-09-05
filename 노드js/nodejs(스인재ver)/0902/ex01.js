@@ -27,6 +27,8 @@ http.createServer(function(request, response){
 
     response.writeHead(200, {"Content-Type" : "text/html;charset=utf-8"});
     // 패킷(Header/Body), writeHead : 패킷에 Header값을 지정
+    // response : Server가 Client에게 응답해주는 객체
+    //                      (html 페이지 생성/페이지이동)
     response.write("<html>");
     response.write("<body>");
     response.write("환영합니다");
