@@ -21,4 +21,19 @@ http.createServer(function(request, response){
 
     console.log("서버 실행");
 
+    let ip = request.connection.remoteAddress;
+    // request : Client의 모든 정보를 갖고 있는 변수
+    console.log("접근한  Client의 IP : "+ip);
+
+    response.writeHead(200, {"Content-Type" : "text/html;charset=utf-8"});
+    // 패킷(Header/Body), writeHead : 패킷에 Header값을 지정
+    response.write("<html>");
+    response.write("<body>");
+    response.write("환영합니다");
+    response.write(" 당신의 IP : "+ ip);
+    response.write("</body>");
+    response.write("</html>");
+    response.end();
+
 }).listen(3000);
+// listen : port번호 설정(방번호)
