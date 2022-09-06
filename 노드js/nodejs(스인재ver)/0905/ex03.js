@@ -5,13 +5,17 @@ http.createServer(function (request, response) {
 
     let query = url.parse(request.url, true).query;  
 
-    console.log("사용자가 입력한 num1값 : "+query.num1);
-    console.log("사용자가 입력한 num1값 : "+query.num2);
-    console.log("num1과 num2의 합 : "+(parseInt(query.num1)+parseInt(query.num2)));
-
     response.writeHead(200, {"Content-Type" : "text/html;charset=utf-8"});
     response.write("<html>");
     response.write("<body>");
+    // 입력한 값만큼 td태그 반복 출력
+    response.write("<table border='1'>");
+    response.write("<tr>");
+    for(let i=1; i<=parseInt(query.num1); i++){
+        response.write("<td>"+i+"</td>");
+    }
+    response.write("</tr>");
+    response.write("</table>");
     
     response.write("</body>");
     response.write("</html>");
