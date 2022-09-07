@@ -9,22 +9,20 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> <!-- babel : JSX를 브라우저가 읽을수 있는 코드로 바꿔줌-->
     <script type="text/babel">
         const root = document.getElementById("root");
-        let counter = 0;
-        function countUp() {
-            counter = counter + 1;
-            render();
-        }
-        function render() {
-            ReactDOM.render(<App/>, root); // react element들을 root div안에서 보여줘
-        }
-        function App (){
-           return( <div>
+        
+        function App () {
+            const [counter, setCounter] = React.useState(0);
+            const onClick = () =>{
+                setCounter(counter+1);
+            }
+           return ( 
+            <div>
                 <h3>Total clicks : {counter}</h3>
-                <button onClick={countUp}>Click me</button>
+                <button onClick={onClick}>Click me</button>
             </div>
             )
         };
         // 컴포넌트의 첫글자는 대문자여야한다
-        render(); 
+       ReactDOM.render(<App />, root);
     </script>
 </html>
