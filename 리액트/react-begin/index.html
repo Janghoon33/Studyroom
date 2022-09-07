@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="root"></div> <!-- ReactDOM이 React element들을 가져다 놓을 곳-->
+    </body>
+    <!-- 어려운 방식의 React-->
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>  <!--ReactDOM : React element를 가져다 HTML로 바꾸는 역할-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> <!-- babel : JSX를 브라우저가 읽을수 있는 코드로 바꿔줌-->
+    <script type="text/babel">
+        const root = document.getElementById("root");
+        let counter = 0;
+        function countUp() {
+            counter = counter + 1;
+            render();
+        }
+        function render() {
+            ReactDOM.render(<App/>, root); // react element들을 root div안에서 보여줘
+        }
+        function App (){
+           return( <div>
+                <h3>Total clicks : {counter}</h3>
+                <button onClick={countUp}>Click me</button>
+            </div>
+            )
+        };
+        // 컴포넌트의 첫글자는 대문자여야한다
+        render(); 
+    </script>
+</html>
