@@ -1,13 +1,13 @@
 const http = require("http");
 const url = require("url");
-let temp = require("./0913/ex02Temp.js");
+let temp = require("./ex03Temp.js");
 
 
 http.createServer(function (request, response) {
 
     let query = url.parse(request.url, true).query;  
 
-    temp.
+    temp.template();
 
     response.writeHead(200, {"Content-Type" : "text/html;charset=utf-8"});
     response.write("<html>");
