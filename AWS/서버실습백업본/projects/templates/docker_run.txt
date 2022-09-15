@@ -1,0 +1,9 @@
+sudo docker run --name poll_db \
+    -p 5432:5432 \
+    --rm \
+    -v poll_db:/var/lib/postgresql/data \
+    -e POSTGRES_PASSWORD=qwer1234 \
+    -e POSTGRES_USER=demo \
+    -e POSTGRES_DB=poll \
+    -d \
+    postgres
