@@ -17,6 +17,7 @@
 * React (35%)  
 * Spring boot (70%) 
 * Aws(Cloud) (5%) 
+* Linux/ubuntu (10%)
 
 ## 4. 현재 개발환경
 |구분|내용|
