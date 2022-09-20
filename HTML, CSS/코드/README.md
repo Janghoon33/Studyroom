@@ -10,3 +10,6 @@ ex27flex.html , ex28Grid.html : 1분코딩
 
 ## 3. 공부한 내용 <img src="https://img.shields.io/badge/ My blog-03C75A?style=flat-square&logo=Naver&logoColor=white&link=https://blog.naver.com/h970303"/>
 https://blog.naver.com/h970303/222771893747
+
+## 4. State
+- 학습완료
