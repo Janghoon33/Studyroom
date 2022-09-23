@@ -16,8 +16,9 @@
 * Node.js (80%)
 * React (35%)  
 * Spring boot (70%) 
-* Aws(Cloud) (5%) 
+* Aws(Cloud) (10%) 
 * Linux/ubuntu (20%)
+* Docker (10%)
 
 ## 4. 현재 개발환경
 |구분|내용|
