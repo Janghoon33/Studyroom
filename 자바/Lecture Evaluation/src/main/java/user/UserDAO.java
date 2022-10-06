@@ -49,7 +49,6 @@ public class UserDAO {
 			pstmt.setString(2, user.getUserPassword());
 			pstmt.setString(3, user.getUserEmail());
 			pstmt.setString(4, user.getUserEmailHash());
-			rs = pstmt.executeQuery();
 			return pstmt.executeUpdate();
 		}catch (Exception e) {
 			e.printStackTrace();
