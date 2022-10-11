@@ -25,7 +25,7 @@
     	}
     	UserDAO userDAO = new UserDAO();
     	int result = userDAO.login(userID, userPassword);
-    	if (result == -1){
+    	if (result == 1){
     		session.setAttribute("userID",userID);
     		PrintWriter script = response.getWriter();
     		script.println("<script>");
