@@ -12,7 +12,7 @@
 * Java  , Spring , python, JSP
 * Crawling , Oracle
 
-## 3. 공부중인 언어 or 라이브러리 🚀
+## 3. 공부중인 언어, 라이브러리 🚀
 * Node.js (80%)
 * React (35%) (잠정보류)
 * Spring boot (70%) 
