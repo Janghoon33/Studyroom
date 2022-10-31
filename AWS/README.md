@@ -12,5 +12,3 @@
 
 ## 3. 공부진행상황 <img src="https://img.shields.io/badge/ My blog-03C75A?style=flat-square&logo=Naver&logoColor=white&link=https://blog.naver.com/h970303"/>
 https://blog.naver.com/h970303/222879751545
-![image](https://user-images.githubusercontent.com/104408863/197729726-830dc356-7a84-4d36-8b67-34f328ea3494.png)
-![image](https://user-images.githubusercontent.com/104408863/197729607-9990f6b3-d5f6-48b8-94e8-9bca053d6f21.png)
