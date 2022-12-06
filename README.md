@@ -18,6 +18,7 @@
 * Spring boot (70%) 
 * Aws(Cloud) (60%) 
 * Docker (40%)
+* Java 알고리즘 공부 (-ing)
 
 ## 4. 현재 개발환경
 |구분|내용|
