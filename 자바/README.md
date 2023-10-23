@@ -5,7 +5,7 @@
 <Strong>Server</Strong> : <img src="https://img.shields.io/badge/Apache Tomcat-F8DC75?style=flat-square&logo=Apache Tomcat&logoColor=white"> 9.0
 
 ## 2. 출처 및 참조
-<b>스프링부트 공부(블로그 만들어보기)</b> : <img src="https://img.shields.io/badge/Youtube-FF0000?style=flat-square&logo=Youtube&logoColor=white"/> 메타코딩 <br>
+<b>스프링부트 복습...</b> : 인프런_최주호(이론) + <img src="https://img.shields.io/badge/Youtube-FF0000?style=flat-square&logo=Youtube&logoColor=white"/> 홍팍(실습) <br>
 <b>Lecture Evaluation</b> : <img src="https://img.shields.io/badge/Youtube-FF0000?style=flat-square&logo=Youtube&logoColor=white"/> 안경잡이개발자 <br>
 <b> 그외 나머지 : 스마트인재개발원</b>
 
