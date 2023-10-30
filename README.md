@@ -15,7 +15,7 @@
 ## 3. 공부중인 언어, 라이브러리 🚀
 * Node.js (60%) 
 * React (35%) (잠정보류)
-* Spring boot (70%) 
+* Spring boot (30%) 
 * Aws(Cloud) (60%) 
 * Docker (40%)
 * Java 알고리즘 공부 (-ing)
