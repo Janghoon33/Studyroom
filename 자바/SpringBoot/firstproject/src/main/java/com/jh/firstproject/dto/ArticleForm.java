@@ -1,5 +1,7 @@
 package com.jh.firstproject.dto;
 
+import com.jh.firstproject.entity.Article;
+
 public class ArticleForm {
 
     private String title;
@@ -18,4 +20,7 @@ public class ArticleForm {
                 '}';
     }
 
+    public Article toEntity() {
+        return new Article(null,title,content);
+    }
 }
