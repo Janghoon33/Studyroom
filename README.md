@@ -24,5 +24,5 @@
 |------|---|
 |개발도구|Eclipse / VisualStudioCode / intellij |
 |서버환경|tomcat 9.0, Node.js 16.14.0|
-|데이터베이스|Oracle, MYSQL|
+|데이터베이스|Oracle, MYSQL, mariaDB|
 
