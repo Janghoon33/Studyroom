@@ -9,15 +9,14 @@
 
 ## 2. 사용가능 언어 or 라이브러리 🤗
 * HTML , CSS , JavaScript
-* Java  , Spring , python, JSP
+* Java  , Spring Boot , python, JSP
 * Crawling , Oracle
 
 ## 3. 공부중인 언어, 라이브러리 🚀
-* Node.js (60%) 
-* React (35%) (잠정보류)
-* Spring boot (30%) < 진행중 >
-* Aws(Cloud) (60%) 
-* Docker (40%)
+* Node.js (wait)
+* React (wait)
+* Spring boot (-ing)
+* Aws(Cloud) (wait) 
 * Java 알고리즘 공부 (-ing)
 
 ## 4. 현재 개발환경
