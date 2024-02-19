@@ -5,6 +5,8 @@ import com.test.Board.repository.BoardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service // service라고 지정
 public class BoardService {
 
@@ -16,4 +18,10 @@ public class BoardService {
         boardRepository.save(board);
 
     }
+
+    public List<Board> boardList(){
+
+        return boardRepository.findAll();
+    }
+
 }
