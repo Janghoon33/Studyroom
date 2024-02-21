@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"> /* 타임리프 템플릿 사용 */
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>게시글 목록 페이지</title>
@@ -27,7 +27,9 @@
             <tbody>
                 <tr th:each="board : ${list}">
                     <td th:text="${board.id}"></td>
-                    <td th:text="${board.title}"></td>
+                    <td>
+                        <a th:text="${board.title}" th:href="@{/board/content(id=${board.id})}"></a>
+                    </td>
                 </tr>
             </tbody>
         </table>

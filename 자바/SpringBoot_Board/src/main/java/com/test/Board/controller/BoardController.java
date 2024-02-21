@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class BoardController {
@@ -34,6 +35,13 @@ public class BoardController {
         model.addAttribute("list",boardService.boardList()); // boardService에서 boardList를 받아서 "list"라는 이름으로 넘기겠다
 
         return "boardList";
+    }
+
+    @GetMapping("/board/content") // localhost:8080/board/content?id=1 로 확인가능
+    public String boardContent(Model model, @RequestParam(name="id") Integer id){
+
+        model.addAttribute("board",boardService.boardContent(id));
+        return "boardcontent";
     }
 
 }

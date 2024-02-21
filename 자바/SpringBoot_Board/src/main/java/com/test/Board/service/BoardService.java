@@ -13,15 +13,23 @@ public class BoardService {
     @Autowired // 객체를 해당 변수에 집어 넣어줌
     private BoardRepository boardRepository;
 
+    // 게시글 작성
     public void write(Board board) {
 
         boardRepository.save(board);
 
     }
 
+    // 게시글 리스트 처리
     public List<Board> boardList(){
 
         return boardRepository.findAll();
+    }
+
+    // 게시글 내용 불러오기
+    public Board boardContent(Integer id){
+
+        return boardRepository.findById(id).get();
     }
 
 }
