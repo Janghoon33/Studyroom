@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -42,6 +43,34 @@ public class BoardController {
 
         model.addAttribute("board",boardService.boardContent(id));
         return "boardcontent";
+    }
+
+    @GetMapping("/board/delete")
+    public String boardDelete(@RequestParam(name="id") Integer id){
+
+        boardService.boardDelete(id);
+
+        return "redirect:/board/list"; // 삭제후 게시글 목록 페이지로 리다이렉트
+    }
+
+    @GetMapping("/board/modify/{id}")
+    public String boardModify(@PathVariable("id") Integer id, Model model){
+
+        model.addAttribute("board",boardService.boardContent(id));
+
+        return "boardmodify";
+    }
+
+    @PostMapping("/board/update/{id}")
+    public String boardUpdate(@PathVariable("id") Integer id, Board board){
+
+        Board boardTemp = boardService.boardContent(id); // 기존의 내용을 담은 boardTemp 객체에 수정할 내용을 덮어 쓰기
+        boardTemp.setTitle(board.getTitle());
+        boardTemp.setContent(board.getContent());
+
+        boardService.write(boardTemp); // boardTemp의 내용으로 저장
+
+        return "redirect:/board/content?id={id}";
     }
 
 }
