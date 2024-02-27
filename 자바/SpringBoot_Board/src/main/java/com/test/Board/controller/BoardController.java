@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 public class BoardController {
@@ -22,12 +23,16 @@ public class BoardController {
         return "boardwrite"; // return 해줄 view 파일
     }
 
-    @PostMapping("board/writedo")
-    public String boardWriteDo(Board board){ // Entity를 그대로 매개변수로 받기
+    @PostMapping("/board/writedo")
+    public String boardWriteDo(Board board, Model model, @RequestParam(name="file") MultipartFile file) throws Exception{ // Entity를 그대로 매개변수로 받기
 
-        boardService.write(board);
+        boardService.write(board,file);
 
-        return "";
+        model.addAttribute("message","글 작성이 완료되었습니다.");
+
+        model.addAttribute("Url","/board/list");
+
+        return "message";
     }
 
     @GetMapping("/board/list")
@@ -62,13 +67,13 @@ public class BoardController {
     }
 
     @PostMapping("/board/update/{id}")
-    public String boardUpdate(@PathVariable("id") Integer id, Board board){
+    public String boardUpdate(@PathVariable("id") Integer id, Board board, @RequestParam(name="file") MultipartFile file) throws Exception{
 
         Board boardTemp = boardService.boardContent(id); // 기존의 내용을 담은 boardTemp 객체에 수정할 내용을 덮어 쓰기
         boardTemp.setTitle(board.getTitle());
         boardTemp.setContent(board.getContent());
 
-        boardService.write(boardTemp); // boardTemp의 내용으로 저장
+        boardService.write(boardTemp, file); // boardTemp의 내용으로 저장
 
         return "redirect:/board/content?id={id}";
     }
