@@ -55,4 +55,10 @@ public class BoardService {
 
     }
 
+    public Page<Board> boardSearchList(String searchKey, Pageable pageable) {
+
+        return boardRepository.findByTitleContaining(searchKey,pageable);
+
+    }
+
 }

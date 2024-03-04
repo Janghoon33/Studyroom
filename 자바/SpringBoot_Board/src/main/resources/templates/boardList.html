@@ -35,9 +35,13 @@
         </table>
         <br><br>
         <th:block th:each="page : ${#numbers.sequence(startPage, endPage)}">
-            <a th:if="${page != nowPage}" th:href="@{/board/list(page = ${page -1})}" th:text="${page}"></a>
+            <a th:if="${page != nowPage}" th:href="@{/board/list(page = ${page -1}, searchKey = ${param.searchKey})}" th:text="${page}"></a> <!-- param값 중 searchKey를 포함하여 같이 넘겨줌 -->
             <strong th:if="${page == nowPage}" th:text="${page}" style="color : red"></strong>
         </th:block>
+        <form th:action="@{/board/list}" method="get">
+            <input type="text" name="searchKey">
+            <button type="submit">검색</button>
+        </form>
     </div>
 </body>
 </html>
