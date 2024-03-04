@@ -10,7 +10,7 @@
 ## 2. 사용가능 언어 or 라이브러리 🤗
 * HTML , CSS , JavaScript
 * Java  , Spring Boot , python, JSP
-* Crawling , Oracle
+* Crawling , Oracle, MYSQL , mariaDB
 
 ## 3. 공부중인 언어, 라이브러리 🚀
 * Node.js (wait)
