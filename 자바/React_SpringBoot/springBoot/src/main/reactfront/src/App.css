@@ -1,3 +1,6 @@
-.number{
-  color: blue;
+.App{
+  margin : 0 auto;
+  margin-top : 200px;
+  text-align: center;
+  width: 400px;
 }
