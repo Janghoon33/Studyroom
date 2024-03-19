@@ -1,32 +1,49 @@
-import './App.css';
-import React, { useState } from 'react';
-
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
 
 const App = () => {
-  
-  const [text, setText] = useState("11");
-  const [edit, setEdit] = useState(false);
 
-  let content = <div>
-    {text}<button onClick={() => setEdit(true)}>수정</button>
-    </div>
+    const [posts, setPosts] = useState([]);
 
-  if(edit) {
-    content =  
-    <div><input type="text"
-                value={text}
-                onChange={(e) => {
-                  setText(e.target.value);
-                }}/>
-          <button onClick={() => setEdit(false)}>수정</button>
-    </div>
-  }
+    useEffect(() => {
+      /*
+      axios 통신 방법 1
+      axios({
+        method : 'GET',
+        url:'https://jsonplaceholder.typicode.com/photos' // fake api url
+      }).then(response => setPosts(response.data))
+      */
+     
+      // 방법 2 
+      /*
+      axios.get('https://jsonplaceholder.typicode.com/photos')
+           .then(response => setPosts(response.data))
+      */
 
-  return (
-    <>
-      {content}
-    </>
-  );
+      // 방법 3
+      async function fetchData(){
+        const response = await axios.get('https://jsonplaceholder.typicode.com/photos')  
+        setPosts(response.data);
+      }
+
+     try {
+      fetchData();
+     } catch(error){
+      console.log(error);
+     }
+      
+    })
+
+    return (
+      <ul>
+        {posts.map(post => (
+          <li key={post.id}>
+            <div>{post.title}</div>
+            <div><img src={post.thumbnailUrl}/></div>
+          </li>
+        ))}
+      </ul>
+    )
 }
 
 export default App;
