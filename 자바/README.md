@@ -6,8 +6,8 @@
 
 
 ## 2. 내용 정리 <img src="https://img.shields.io/badge/ My blog-03C75A?style=flat-square&logo=Naver&logoColor=white&link=https://blog.naver.com/h970303"/>
-https://blog.naver.com/h970303/222864050392
+https://blog.naver.com/h970303
 
 ## 3. State
-- 스프링부트 공부 진행중
+- 스프링부트 복습 진행중
 
