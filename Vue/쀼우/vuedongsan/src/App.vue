@@ -1,16 +1,33 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  Hi It's Me (여기가 메인페이지) App.vue 를 index.html에 박아넣어서 웹에 표기(그걸 main.js가 함)
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h4 class="red" :style="스타일">{{ products[0] }}</h4>
+    <p>{{ price1 }} 만원</p>
+  </div>
+  <div>
+    <h4>{{ products[1] }}</h4>
+    <p>{{ price2 }} 만원</p> 
+  </div>
+  <div>
+    <h4>{{ products[2] }}</h4>
+    <p>{{ price2 }} 만원</p> 
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
+  data(){ // 데이터 보관함
+    return {
+      price1 : 80,
+      price2 : 70,
+      스타일 : 'color : blue',
+      products : ['역삼동원룸', '천호동원룸', '마포구원룸' ],
+    }
+  },
   components: {
-    HelloWorld
+    
   }
 }
 </script>
