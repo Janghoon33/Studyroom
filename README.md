@@ -13,6 +13,7 @@
 * Node.js (wait)
 * React (wait)
 * Spring boot (-ing)
+* Vue (-ing)
 * Aws(Cloud) (-> blog post -ing) 
 * Java 알고리즘 공부 (-ing)
 
