@@ -99,4 +99,8 @@ methods: {
 - methods에 함수 선언가능 
 - 함수안에서 데이터를 사용할땐 this를 사용해야함
 - 따옴표안의 로직 대신 함수 기입
-- Vue에서는 함수호출시 () 안붙임 
+- Vue에서는 함수호출시 () 안붙임
+
+<br>
+
+**[⬆ back to top](#Category-Category)**
