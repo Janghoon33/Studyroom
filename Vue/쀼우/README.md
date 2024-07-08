@@ -7,6 +7,7 @@
 - [🐛 v-for](#-v-for)
 - [🐛 이벤트핸들러](#-이벤트핸들러)
 - [🐛 UI와 v-if](#-UI와-v-if)
+- [🐛 export/import](#-exportimport)
 
 <br>
 
@@ -120,6 +121,40 @@ v-if="조건식"
 ```
 - 조건식이 참일때만 HTML을 표기
 - 데이터를 활용하면 UI를 쉽게 끄거나 켜는게 가능
+<br>
+
+
+## 🐛 export/import
+- 파일간 변수 공유를 하기 위해서 export/import 활용
+
+  
+<a.js의 변수를 b.js에서 쓰고싶을때>
+1. 방법 1
+```javascript
+-----a.js-----
+var apple = 10;
+export default apple
+--------------------
+
+-----b.js------
+import apple from 'a.js 의 경로';
+---------------
+-> import 하고 그 변수를 안쓰면 오류남
+```
+2. 방법 2
+```javascript
+-----a.js-----
+var apple = 10;
+var apple2 = 100;
+export {apple, apple2}
+--------------------
+
+-----b.js------
+import {apple, apple2} from 'a.js 의 경로';
+apple2
+---------------
+```
+
 <br>
 
 **[⬆ back to top](#Category)**
