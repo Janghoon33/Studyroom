@@ -7,7 +7,7 @@
 - [🐛 v-for](#-v-for)
 - [🐛 이벤트핸들러](#-이벤트핸들러)
 - [🐛 UI와 v-if](#-UI와-v-if)
-- [🐛 export/import](#-export-import)
+- [🐛 export/import](#-exportimport)
 
 <br>
 
