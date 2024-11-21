@@ -2,8 +2,7 @@
 * Node.js (wait)
 * React (wait)
 * Spring boot (-ing)
-* Vue (-ing)
-* Aws(Cloud) (-> blog post -ing) 
+* Vue (wait)
 * Java 알고리즘 공부 (-ing)
 
 ## 개발환경
