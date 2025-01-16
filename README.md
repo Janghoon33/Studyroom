@@ -3,7 +3,8 @@
 * React (wait)
 * Spring boot (-ing)
 * Vue (wait)
-* Java 알고리즘 공부 (-ing)
+* Java 알고리즘 공부 (wait)
+* Java (-ing)
 
 ## 개발환경
 |구분|내용|
