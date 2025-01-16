@@ -1,7 +1,7 @@
 # Java Study 👨‍💻
 
 ## 1. 개발환경
-<Strong>Tool</Strong> :  <img src="https://img.shields.io/badge/Eclipse IDE-2C2255?style=flat-square&logo=Eclipse IDE&logoColor=white"/> <img src="https://img.shields.io/badge/Java-40AEF0?style=flat-square&logo=Java&logoColor=white"/>  <img src="https://img.shields.io/badge/SpringBoot-6DB33F?style=flat-square&logo=SpringBoot&logoColor=white"/> <br>
+<Strong>Tool</Strong> : ![IntelliJ_IDEA](https://img.shields.io/badge/IntelliJ_IDEA-000000?style=flat-square&logo=IntelliJ%20IDEA&logoColor=white) <img src="https://img.shields.io/badge/Eclipse IDE-2C2255?style=flat-square&logo=Eclipse IDE&logoColor=white"/> <img src="https://img.shields.io/badge/Java-40AEF0?style=flat-square&logo=Java&logoColor=white"/>  <img src="https://img.shields.io/badge/SpringBoot-6DB33F?style=flat-square&logo=SpringBoot&logoColor=white"/> <br>
 <Strong>Server</Strong> : <img src="https://img.shields.io/badge/Apache Tomcat-F8DC75?style=flat-square&logo=Apache Tomcat&logoColor=white"> 9.0
 
 
