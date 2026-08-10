@@ -1,5 +1,6 @@
 package sample.cafekiosk.unit;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import sample.cafekiosk.unit.beverage.Americano;
 import sample.cafekiosk.unit.beverage.Latte;
@@ -22,6 +23,7 @@ class CafeKioskTest {
     }
 
     // 기능을 통해서 언어가 체크
+    @DisplayName("음료 1개를 추가하면 주문 목록에 담긴다.")
     @Test
     void add() {
         CafeKiosk ck = new CafeKiosk();
@@ -110,4 +112,21 @@ class CafeKioskTest {
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessage("주문 시간이 아닙니다. 관리자에게 문의해 주세요.");
     }
+
+    @DisplayName("음료 총합계산 테스트")
+    @Test
+    void calculateTotalPrice(){ // 메소드명을 한글로 해서 문서화 또한 가능
+        CafeKiosk ck = new CafeKiosk();
+        Americano americano = new Americano();
+
+        Latte latte = new Latte();
+
+        ck.add(americano);
+        ck.add(latte);
+
+        int totalPrice = ck.calculateTotalPrice();
+
+        assertThat(totalPrice).isEqualTo(8500);
+    }
+
 }
