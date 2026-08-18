@@ -113,9 +113,10 @@ class CafeKioskTest {
                 .hasMessage("주문 시간이 아닙니다. 관리자에게 문의해 주세요.");
     }
 
-    @DisplayName("음료 총합계산 테스트")
+    @DisplayName("주문 목록에 담긴 상품들의 총 금액을 계산할 수 있다.")
     @Test
     void calculateTotalPrice(){ // 메소드명을 한글로 해서 문서화 또한 가능
+        // given : 시나리오 진행에 필요한 모든 준비 과정
         CafeKiosk ck = new CafeKiosk();
         Americano americano = new Americano();
 
@@ -124,8 +125,10 @@ class CafeKioskTest {
         ck.add(americano);
         ck.add(latte);
 
+        // when : 시나리오 행동 진행
         int totalPrice = ck.calculateTotalPrice();
 
+        // then : 시나리오 진행에 대한 결과 명시, 검증
         assertThat(totalPrice).isEqualTo(8500);
     }
 
